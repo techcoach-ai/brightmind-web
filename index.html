@@ -9,21 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --white: #ffffff;
-  --off-white: #1a1a2e;
-  --mid: #6b7280;
-  --black: #111827;
-  --bg: #ffffff;
-  --bg-alt: #f8f9fc;
-  --bg-alt2: #f1f3f9;
-  --accent: #5b5cf6;
-  --accent-glow: rgba(91,92,246,0.25);
-  --teal: #0ea5a0;
-  --teal-glow: rgba(14,165,160,0.25);
-  --card-bg: #ffffff;
-  --card-border: #e5e7ef;
-  --text: #111827;
-  --text-soft: #374151;
+  --white: #ffffff;
+  --off-white: #1a1a2e;
+  --mid: #6b7280;
+  --black: #111827;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fc;
+  --bg-alt2: #f1f3f9;
+  --accent: #5b5cf6;
+  --accent-glow: rgba(91,92,246,0.25);
+  --teal: #0ea5a0;
+  --teal-glow: rgba(14,165,160,0.25);
+  --card-bg: #ffffff;
+  --card-border: #e5e7ef;
+  --text: #111827;
+  --text-soft: #374151;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -31,10 +31,10 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 
 /* ── NAV ── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;
-  background:rgba(255,255,255,0.85);backdrop-filter:saturate(180%) blur(20px);
-  border-bottom:1px solid rgba(0,0,0,0.07);transition:background .3s;
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;
+  background:rgba(255,255,255,0.85);backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,0.07);transition:background .3s;
 }
 .nav-logo{font-size:1.05rem;font-weight:700;letter-spacing:-.02em;color:var(--text);text-decoration:none}
 .nav-logo span{color:var(--accent)}
@@ -46,13 +46,13 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:7rem 5% 5rem;position:relative;overflow:hidden;
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:7rem 5% 5rem;position:relative;overflow:hidden;
 }
 .hero-bg{position:absolute;inset:0;z-index:0;
-  background:
-    radial-gradient(ellipse 90% 70% at 50% -10%,rgba(91,92,246,.09) 0%,transparent 60%),
-    radial-gradient(ellipse 50% 40% at 85% 90%,rgba(14,165,160,.07) 0%,transparent 55%),#fff}
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -10%,rgba(91,92,246,.09) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 90%,rgba(14,165,160,.07) 0%,transparent 55%),#fff}
 .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:1;filter:blur(90px);animation:orbFloat 9s ease-in-out infinite}
 .orb-1{width:600px;height:600px;background:rgba(91,92,246,.07);top:-150px;left:50%;transform:translateX(-55%)}
 .orb-2{width:400px;height:400px;background:rgba(14,165,160,.05);bottom:-50px;right:-80px;animation-delay:-4s}
@@ -61,33 +61,33 @@ nav{
 
 .hero-inner{position:relative;z-index:2;max-width:960px}
 .hero-pill{
-  display:inline-flex;align-items:center;gap:.5rem;
-  background:rgba(91,92,246,.07);border:1px solid rgba(91,92,246,.2);
-  padding:.4rem 1.1rem;border-radius:50px;margin-bottom:2rem;
-  font-size:.78rem;font-weight:500;color:var(--accent);
-  opacity:0;animation:fadeUp .7s .15s ease forwards;
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(91,92,246,.07);border:1px solid rgba(91,92,246,.2);
+  padding:.4rem 1.1rem;border-radius:50px;margin-bottom:2rem;
+  font-size:.78rem;font-weight:500;color:var(--accent);
+  opacity:0;animation:fadeUp .7s .15s ease forwards;
 }
 .pill-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
 
 .hero-title{
-  font-size:clamp(3.2rem,8.5vw,7rem);font-weight:700;letter-spacing:-.045em;line-height:1;
-  margin-bottom:1.75rem;
-  opacity:0;animation:fadeUp .9s .3s ease forwards;
+  font-size:clamp(3.2rem,8.5vw,7rem);font-weight:700;letter-spacing:-.045em;line-height:1;
+  margin-bottom:1.75rem;
+  opacity:0;animation:fadeUp .9s .3s ease forwards;
 }
 .hero-title .line1{
-  display:block;
-  color:var(--text);
+  display:block;
+  color:var(--text);
 }
 .hero-title .line2{
-  display:block;
-  background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  display:block;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .hero-sub{
-  font-size:clamp(1.05rem,2vw,1.3rem);font-weight:300;color:var(--mid);
-  max-width:640px;margin:0 auto 2.75rem;line-height:1.7;
-  opacity:0;animation:fadeUp .9s .48s ease forwards;
+  font-size:clamp(1.05rem,2vw,1.3rem);font-weight:300;color:var(--mid);
+  max-width:640px;margin:0 auto 2.75rem;line-height:1.7;
+  opacity:0;animation:fadeUp .9s .48s ease forwards;
 }
 .hero-sub strong{color:var(--text-soft);font-weight:600}
 
@@ -100,13 +100,13 @@ nav{
 
 /* agent ticker */
 .hero-agents{
-  margin-top:3.5rem;display:flex;align-items:center;gap:1.5rem;justify-content:center;
-  opacity:0;animation:fadeUp .9s .78s ease forwards;flex-wrap:wrap;
+  margin-top:3.5rem;display:flex;align-items:center;gap:1.5rem;justify-content:center;
+  opacity:0;animation:fadeUp .9s .78s ease forwards;flex-wrap:wrap;
 }
 .agent-chip{
-  display:flex;align-items:center;gap:.5rem;
-  background:var(--bg-alt);border:1px solid var(--card-border);
-  padding:.45rem .9rem;border-radius:50px;font-size:.78rem;color:var(--mid);
+  display:flex;align-items:center;gap:.5rem;
+  background:var(--bg-alt);border:1px solid var(--card-border);
+  padding:.45rem .9rem;border-radius:50px;font-size:.78rem;color:var(--mid);
 }
 .agent-chip .chip-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
 .agent-chip:nth-child(2) .chip-dot{animation-delay:-.5s}
@@ -128,9 +128,9 @@ nav{
 /* agents grid */
 .agents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:4rem}
 .agent-card{
-  background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:20px;padding:2rem;
-  position:relative;overflow:hidden;
-  transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s;
+  background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:20px;padding:2rem;
+  position:relative;overflow:hidden;
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s;
 }
 .agent-card::before{content:'';position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(91,92,246,.06) 0%,transparent 65%);opacity:0;transition:opacity .3s;pointer-events:none}
 .agent-card:hover::before{opacity:1}
@@ -139,8 +139,8 @@ nav{
 .agent-card.featured::after{content:'Most Popular';position:absolute;top:1.25rem;right:1.25rem;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.28rem .75rem;border-radius:20px}
 
 .agent-icon{
-  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
-  font-size:1.5rem;margin-bottom:1.5rem;
+  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:1.5rem;
 }
 .ic-purple{background:rgba(91,92,246,.1)}
 .ic-teal{background:rgba(14,165,160,.1)}
@@ -183,9 +183,9 @@ nav{
 
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .plan-card{
-  background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:22px;
-  padding:2.25rem;position:relative;overflow:hidden;
-  transition:transform .3s,border-color .3s,box-shadow .3s;
+  background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:22px;
+  padding:2.25rem;position:relative;overflow:hidden;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
 }
 .plan-card:hover{transform:translateY(-5px);border-color:rgba(91,92,246,.25);box-shadow:0 16px 48px rgba(91,92,246,.1)}
 .plan-card.plan-featured{border-color:rgba(91,92,246,.3);background:linear-gradient(160deg,rgba(91,92,246,.04),rgba(14,165,160,.02))}
@@ -200,16 +200,16 @@ nav{
 .plan-tagline{font-size:.87rem;color:var(--mid);margin-bottom:2rem;line-height:1.5}
 
 .plan-build{
-  background:var(--bg-alt2);border:1.5px solid var(--card-border);
-  border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;
+  background:var(--bg-alt2);border:1.5px solid var(--card-border);
+  border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;
 }
 .plan-build-label{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:.3rem}
 .plan-build-price{font-size:1.5rem;font-weight:700;letter-spacing:-.03em;color:var(--text)}
 .plan-build-price span{font-size:.82rem;font-weight:400;color:var(--mid)}
 
 .plan-monthly{
-  background:rgba(91,92,246,.05);border:1.5px solid rgba(91,92,246,.15);
-  border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.75rem;
+  background:rgba(91,92,246,.05);border:1.5px solid rgba(91,92,246,.15);
+  border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.75rem;
 }
 .plan-monthly-label{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
 .plan-monthly-price{font-size:2rem;font-weight:700;letter-spacing:-.04em;color:var(--text)}
@@ -229,8 +229,8 @@ nav{
 
 /* pricing explainer */
 .pricing-explainer{
-  margin-top:3rem;background:var(--bg);border:1.5px solid var(--card-border);
-  border-radius:18px;padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3rem;background:var(--bg);border:1.5px solid var(--card-border);
+  border-radius:18px;padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
 }
 .pe-item{}
 .pe-title{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
@@ -242,18 +242,18 @@ nav{
 .how-sticky{position:sticky;top:90px}
 .how-steps{display:flex;flex-direction:column}
 .how-step{
-  padding:1.75rem 0;border-bottom:1px solid var(--card-border);
-  display:flex;gap:1.25rem;align-items:flex-start;
-  opacity:.3;transition:opacity .4s;cursor:pointer;
+  padding:1.75rem 0;border-bottom:1px solid var(--card-border);
+  display:flex;gap:1.25rem;align-items:flex-start;
+  opacity:.3;transition:opacity .4s;cursor:pointer;
 }
 .how-step:last-child{border-bottom:none}
 .how-step.active{opacity:1}
 .how-step-num{
-  width:36px;height:36px;border-radius:50%;flex-shrink:0;
-  background:rgba(91,92,246,.08);border:1px solid rgba(91,92,246,.2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.78rem;font-weight:700;color:var(--accent);
-  transition:background .3s,border-color .3s;
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:rgba(91,92,246,.08);border:1px solid rgba(91,92,246,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;font-weight:700;color:var(--accent);
+  transition:background .3s,border-color .3s;
 }
 .how-step.active .how-step-num{background:var(--accent);border-color:var(--accent);color:#fff}
 .how-step h3{font-size:1rem;font-weight:600;margin-bottom:.35rem;color:var(--text)}
@@ -261,9 +261,9 @@ nav{
 
 .how-demo-panel{display:flex;flex-direction:column;gap:1rem}
 .how-demo{
-  background:var(--card-bg);border:1.5px solid var(--card-border);
-  border-radius:16px;padding:1.75rem;
-  transition:border-color .4s,background .4s,box-shadow .4s;
+  background:var(--card-bg);border:1.5px solid var(--card-border);
+  border-radius:16px;padding:1.75rem;
+  transition:border-color .4s,background .4s,box-shadow .4s;
 }
 .how-demo.active{border-color:rgba(91,92,246,.3);background:rgba(91,92,246,.03);box-shadow:0 8px 32px rgba(91,92,246,.08)}
 .demo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
@@ -354,740 +354,780 @@ footer{background:var(--text);padding:4rem 5% 2rem;border-top:1px solid rgba(255
 
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
-  .agents-grid{grid-template-columns:repeat(2,1fr)}
-  .agent-wide{grid-column:span 2;grid-template-columns:1fr}
-  .plans-grid{grid-template-columns:1fr}
-  .how-grid{grid-template-columns:1fr}
-  .how-sticky{position:static}
-  .included-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-top{grid-template-columns:1fr 1fr}
+  .agents-grid{grid-template-columns:repeat(2,1fr)}
+  .agent-wide{grid-column:span 2;grid-template-columns:1fr}
+  .plans-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  .how-sticky{position:static}
+  .included-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .nav-links{display:none}
-  .agents-grid{grid-template-columns:1fr}
-  .agent-wide{grid-column:span 1}
-  .process-steps{grid-template-columns:repeat(2,1fr)}
-  .process-steps::before{display:none}
-  .testi-grid{grid-template-columns:1fr}
-  .included-grid{grid-template-columns:repeat(2,1fr)}
-  .pricing-explainer{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;gap:.75rem;text-align:center}
-  .cmp-row{grid-template-columns:1.2fr 1fr 1fr}
+  .nav-links{display:none}
+  .agents-grid{grid-template-columns:1fr}
+  .agent-wide{grid-column:span 1}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .testi-grid{grid-template-columns:1fr}
+  .included-grid{grid-template-columns:repeat(2,1fr)}
+  .pricing-explainer{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;gap:.75rem;text-align:center}
+  .cmp-row{grid-template-columns:1.2fr 1fr 1fr}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav id="main-nav">
-  <a href="#" class="nav-logo">Bright<span>Mind</span> Digital</a>
-  <ul class="nav-links">
-    <li><a href="#agents">AI Agents</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact" class="nav-cta">Book Free Chat</a></li>
-  </ul>
+  <a href="#" class="nav-logo">Bright<span>Mind</span> Digital</a>
+  <ul class="nav-links">
+    <li><a href="#agents">AI Agents</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Book Free Chat</a></li>
+  </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-  <div class="hero-inner">
-    <div class="hero-pill">
-      <span class="pill-dot"></span>
-      AI Agents for Small &amp; Medium Businesses · Hastings, East Sussex
-    </div>
-    <h1 class="hero-title">
-      <span class="line1">Your business,</span>
-      <span class="line2">powered by AI.</span>
-    </h1>
-    <p class="hero-sub">
-      We build <strong>custom AI agents</strong> that work for your business around the clock — handling enquiries, automating admin, writing content, and more. <strong>No tech knowledge needed. Ever.</strong>
-    </p>
-    <div class="hero-actions">
-      <a href="#pricing" class="btn btn-glow">See Plans & Pricing →</a>
-      <a href="#agents" class="btn btn-ghost">Meet the Agents</a>
-    </div>
-    <div class="hero-agents">
-      <div class="agent-chip"><span class="chip-dot"></span> Enquiry Agent</div>
-      <div class="agent-chip"><span class="chip-dot"></span> Content Agent</div>
-      <div class="agent-chip"><span class="chip-dot"></span> Booking Agent</div>
-      <div class="agent-chip"><span class="chip-dot"></span> Review Agent</div>
-    </div>
-  </div>
-  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-pill">
+      <span class="pill-dot"></span>
+      AI Agents for Small &amp; Medium Businesses · Hastings, East Sussex
+    </div>
+    <h1 class="hero-title">
+      <span class="line1">Your business,</span>
+      <span class="line2">powered by AI.</span>
+    </h1>
+    <p class="hero-sub">
+      We build <strong>custom AI agents</strong> that work for your business around the clock — handling enquiries, automating admin, writing content, and more. <strong>No tech knowledge needed. Ever.</strong>
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-glow">See Plans & Pricing →</a>
+      <a href="#agents" class="btn btn-ghost">Meet the Agents</a>
+    </div>
+    <div class="hero-agents">
+      <div class="agent-chip"><span class="chip-dot"></span> Enquiry Agent</div>
+      <div class="agent-chip"><span class="chip-dot"></span> Content Agent</div>
+      <div class="agent-chip"><span class="chip-dot"></span> Booking Agent</div>
+      <div class="agent-chip"><span class="chip-dot"></span> Review Agent</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
+<!-- AGENT SHOWCASE -->
 <section class="agent-showcase" id="agents">
-  <div class="inner">
-    <span class="eyebrow fade-up">AI Agents</span>
-    <h2 class="section-title fade-up">Agents built for<br>your business.</h2>
-    <p class="section-sub fade-up" style="margin:0">Each agent is custom-configured for you — trained on your business, your tone, your customers. We handle everything. You just watch it work.</p>
+  <div class="inner">
+    <span class="eyebrow fade-up">AI Agents</span>
+    <h2 class="section-title fade-up">Agents built for<br>your business.</h2>
+    <p class="section-sub fade-up" style="margin:0">Each agent is custom-configured for you — trained on your business, your tone, your customers. We handle everything. You just watch it work.</p>
 
-    <div class="agents-grid" style="margin-top:4rem">
+    <div class="agents-grid" style="margin-top:4rem">
 
-            <div class="agent-card agent-wide featured fade-up">
-        <div class="agent-wide-text">
-          <div class="agent-icon ic-purple">🤖</div>
-          <div style="display:inline-block;background:linear-gradient(90deg,var(--accent),var(--teal));color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.28rem .8rem;border-radius:20px;margin-bottom:1rem">Core Agent</div>
-          <div class="agent-name" style="font-size:1.4rem">Your 24/7 Customer Agent</div>
-          <div class="agent-desc" style="font-size:.95rem;max-width:420px">Answers enquiries, qualifies leads, books appointments, and follows up — instantly, any time of day. Like having a team member who never clocks off.</div>
-          <div class="agent-tag">Included in every plan</div>
-        </div>
-        <div class="agent-wide-demo" id="ai-demo-widget">
+      <!-- Wide featured agent -->
+      <div class="agent-card agent-wide featured fade-up">
+        <div class="agent-wide-text">
+          <div class="agent-icon ic-purple">🤖</div>
+          <div style="display:inline-block;background:linear-gradient(90deg,var(--accent),var(--teal));color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.28rem .8rem;border-radius:20px;margin-bottom:1rem">Core Agent</div>
+          <div class="agent-name" style="font-size:1.4rem">Your 24/7 Customer Agent</div>
+          <div class="agent-desc" style="font-size:.95rem;max-width:420px">Answers enquiries, qualifies leads, books appointments, and follows up — instantly, any time of day. Like having a team member who never clocks off.</div>
+          <div class="agent-tag">Included in every plan</div>
+        </div>
+        <div class="agent-wide-demo" id="ai-demo-widget">
 
-                    <div id="demo-step-1">
-            <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem">✦ Try it — what's your business?</div>
-            <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.5">Pick your business type and see exactly how AI could help you.</p>
-            <div id="biz-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;">
-              <button class="biz-btn" data-biz="Plumber or Tradesperson" data-emoji="🔧" onclick="selectBiz(this)"><span>🔧</span>Trades</button>
-              <button class="biz-btn" data-biz="Restaurant or Café" data-emoji="☕" onclick="selectBiz(this)"><span>☕</span>Café / Restaurant</button>
-              <button class="biz-btn" data-biz="Hair Salon or Beauty Business" data-emoji="💅" onclick="selectBiz(this)"><span>💅</span>Hair & Beauty</button>
-              <button class="biz-btn" data-biz="Accountant or Solicitor" data-emoji="💼" onclick="selectBiz(this)"><span>💼</span>Professional Services</button>
-              <button class="biz-btn" data-biz="Retail Shop" data-emoji="🛍️" onclick="selectBiz(this)"><span>🛍️</span>Retail</button>
-              <button class="biz-btn" data-biz="Fitness or Health Coach" data-emoji="🏋️" onclick="selectBiz(this)"><span>🏋️</span>Health & Fitness</button>
-              <button class="biz-btn" data-biz="Estate Agent or Letting Agent" data-emoji="🏠" onclick="selectBiz(this)"><span>🏠</span>Estate Agent</button>
-              <button class="biz-btn" data-biz="Childcare or Nursery" data-emoji="🧒" onclick="selectBiz(this)"><span>🧒</span>Childcare</button>
-              <button class="biz-btn" data-biz="Other small or medium business" data-emoji="🏢" onclick="selectBiz(this)"><span>🏢</span>Other</button>
-            </div>
-          </div>
+          <!-- STEP 1: Pick business type -->
+          <div id="demo-step-1">
+            <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem">✦ Try it — what's your business?</div>
+            <p style="font-size:.82rem;color:var(--mid);margin-bottom:1rem;line-height:1.5">Pick your business type and see exactly how AI could help you.</p>
+            <div id="biz-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;">
+              <button class="biz-btn" data-biz="Plumber or Tradesperson" data-emoji="🔧" onclick="selectBiz(this)"><span>🔧</span>Trades</button>
+              <button class="biz-btn" data-biz="Restaurant or Café" data-emoji="☕" onclick="selectBiz(this)"><span>☕</span>Café / Restaurant</button>
+              <button class="biz-btn" data-biz="Hair Salon or Beauty Business" data-emoji="💅" onclick="selectBiz(this)"><span>💅</span>Hair & Beauty</button>
+              <button class="biz-btn" data-biz="Accountant or Solicitor" data-emoji="💼" onclick="selectBiz(this)"><span>💼</span>Professional Services</button>
+              <button class="biz-btn" data-biz="Retail Shop" data-emoji="🛍️" onclick="selectBiz(this)"><span>🛍️</span>Retail</button>
+              <button class="biz-btn" data-biz="Fitness or Health Coach" data-emoji="🏋️" onclick="selectBiz(this)"><span>🏋️</span>Health & Fitness</button>
+              <button class="biz-btn" data-biz="Estate Agent or Letting Agent" data-emoji="🏠" onclick="selectBiz(this)"><span>🏠</span>Estate Agent</button>
+              <button class="biz-btn" data-biz="Childcare or Nursery" data-emoji="🧒" onclick="selectBiz(this)"><span>🧒</span>Childcare</button>
+              <button class="biz-btn" data-biz="Other small or medium business" data-emoji="🏢" onclick="selectBiz(this)"><span>🏢</span>Other</button>
+            </div>
+          </div>
 
-                    <div id="demo-step-2" style="display:none">
-            <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem">✦ Quick question for you</div>
-            <div id="demo-question" style="font-size:.92rem;font-weight:500;color:var(--text);margin-bottom:1.1rem;line-height:1.5"></div>
-            <div id="demo-options" style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem"></div>
-            <button onclick="goBack()" style="background:none;border:none;font-size:.75rem;color:var(--mid);cursor:pointer;padding:0;text-decoration:underline">← Change business type</button>
-          </div>
+          <!-- STEP 2: Answer a quick question -->
+          <div id="demo-step-2" style="display:none">
+            <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem">✦ Quick question for you</div>
+            <div id="demo-question" style="font-size:.92rem;font-weight:500;color:var(--text);margin-bottom:1.1rem;line-height:1.5"></div>
+            <div id="demo-options" style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem"></div>
+            <button onclick="goBack()" style="background:none;border:none;font-size:.75rem;color:var(--mid);cursor:pointer;padding:0;text-decoration:underline">← Change business type</button>
+          </div>
 
-                    <div id="demo-step-3" style="display:none">
-            <div style="font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem">✦ Here's how AI can help your business</div>
-            <div id="demo-response-wrap" style="background:#fff;border:1.5px solid var(--card-border);border-radius:12px;padding:1.1rem 1.25rem;min-height:80px;">
-              <div id="demo-typing" style="display:flex;gap:5px;align-items:center;padding:.25rem 0">
-                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite;display:inline-block"></span>
-                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite .2s;display:inline-block"></span>
-                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite .4s;display:inline-block"></span>
-              </div>
-              <div id="demo-response-text" style="font-size:.9rem;color:var(--text);line-height:1.85;display:none;white-space:pre-line;font-weight:400"></div>
-            </div>
+          <!-- STEP 3: AI response -->
+          <div id="demo-step-3" style="display:none">
+            <div style="font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem">✦ Here's how AI can help your business</div>
+            <div id="demo-response-wrap" style="background:#fff;border:1.5px solid var(--card-border);border-radius:12px;padding:1.1rem 1.25rem;min-height:80px;">
+              <div id="demo-typing" style="display:flex;gap:5px;align-items:center;padding:.25rem 0">
+                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite;display:inline-block"></span>
+                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite .2s;display:inline-block"></span>
+                <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:typingDot 1.2s ease-in-out infinite .4s;display:inline-block"></span>
+              </div>
+              <div id="demo-response-text" style="font-size:.9rem;color:var(--text);line-height:1.85;display:none;white-space:pre-line;font-weight:400"></div>
+            </div>
 
-                        <div id="demo-stat" style="display:none;margin-top:.75rem;background:linear-gradient(135deg,rgba(91,92,246,.07),rgba(14,165,160,.06));border:1.5px solid rgba(91,92,246,.15);border-radius:14px;padding:1rem 1.25rem;display:none;align-items:center;gap:1rem">
-              <div style="font-size:2.2rem;font-weight:700;letter-spacing:-.04em;background:linear-gradient(135deg,var(--accent),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap" id="demo-stat-num">—</div>
-              <div>
-                <div style="font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:.1rem" id="demo-stat-label">Time saved</div>
-                <div style="font-size:.73rem;color:var(--mid)" id="demo-stat-sub">on average per week</div>
-              </div>
-            </div>
+            <!-- Time saved highlight -->
+            <div id="demo-stat" style="display:none;margin-top:.75rem;background:linear-gradient(135deg,rgba(91,92,246,.07),rgba(14,165,160,.06));border:1.5px solid rgba(91,92,246,.15);border-radius:14px;padding:1rem 1.25rem;display:none;align-items:center;gap:1rem">
+              <div style="font-size:2.2rem;font-weight:700;letter-spacing:-.04em;background:linear-gradient(135deg,var(--accent),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap" id="demo-stat-num">—</div>
+              <div>
+                <div style="font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:.1rem" id="demo-stat-label">Time saved</div>
+                <div style="font-size:.73rem;color:var(--mid)" id="demo-stat-sub">on average per week</div>
+              </div>
+            </div>
 
-            <div id="demo-ctas" style="display:none;margin-top:1rem;gap:.6rem;flex-wrap:wrap">
-              <a href="#pricing" style="font-size:.8rem;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid rgba(91,92,246,.25);padding:.4rem .9rem;border-radius:20px;transition:background .2s" onmouseover="this.style.background='rgba(91,92,246,.06)'" onmouseout="this.style.background='transparent'">See plans →</a>
-              <button onclick="resetDemo()" style="font-size:.8rem;font-weight:400;color:var(--mid);background:none;border:none;cursor:pointer;text-decoration:underline;padding:.4rem 0">Try another business</button>
-            </div>
-          </div>
+            <div id="demo-ctas" style="display:none;margin-top:1rem;gap:.6rem;flex-wrap:wrap">
+              <a href="#pricing" style="font-size:.8rem;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid rgba(91,92,246,.25);padding:.4rem .9rem;border-radius:20px;transition:background .2s" onmouseover="this.style.background='rgba(91,92,246,.06)'" onmouseout="this.style.background='transparent'">See plans →</a>
+              <button onclick="resetDemo()" style="font-size:.8rem;font-weight:400;color:var(--mid);background:none;border:none;cursor:pointer;text-decoration:underline;padding:.4rem 0">Try another business</button>
+            </div>
+          </div>
 
-        </div>
+        </div>
 
-        <style>
-          .biz-btn {
-            background: #f8f9fc; border: 1.5px solid var(--card-border);
-            border-radius: 10px; padding: .6rem .5rem;
-            font-size: .75rem; font-weight: 500; color: var(--text-soft);
-            cursor: pointer; display: flex; flex-direction: column;
-            align-items: center; gap: .3rem; transition: all .2s;
-            font-family: inherit; line-height: 1.3; text-align: center;
-          }
-          .biz-btn span { font-size: 1.3rem; }
-          .biz-btn:hover { border-color: var(--accent); background: rgba(91,92,246,.05); color: var(--accent); }
-          .biz-btn.selected { border-color: var(--accent); background: rgba(91,92,246,.08); color: var(--accent); }
-          .answer-btn {
-            background: #f8f9fc; border: 1.5px solid var(--card-border);
-            border-radius: 10px; padding: .65rem 1rem;
-            font-size: .84rem; color: var(--text-soft); cursor: pointer;
-            text-align: left; transition: all .2s; font-family: inherit;
-            width: 100%; font-weight: 400;
-          }
-          .answer-btn:hover { border-color: var(--accent); background: rgba(91,92,246,.05); color: var(--accent); }
-        </style>
+        <style>
+          .biz-btn {
+            background: #f8f9fc; border: 1.5px solid var(--card-border);
+            border-radius: 10px; padding: .6rem .5rem;
+            font-size: .75rem; font-weight: 500; color: var(--text-soft);
+            cursor: pointer; display: flex; flex-direction: column;
+            align-items: center; gap: .3rem; transition: all .2s;
+            font-family: inherit; line-height: 1.3; text-align: center;
+          }
+          .biz-btn span { font-size: 1.3rem; }
+          .biz-btn:hover { border-color: var(--accent); background: rgba(91,92,246,.05); color: var(--accent); }
+          .biz-btn.selected { border-color: var(--accent); background: rgba(91,92,246,.08); color: var(--accent); }
+          .answer-btn {
+            background: #f8f9fc; border: 1.5px solid var(--card-border);
+            border-radius: 10px; padding: .65rem 1rem;
+            font-size: .84rem; color: var(--text-soft); cursor: pointer;
+            text-align: left; transition: all .2s; font-family: inherit;
+            width: 100%; font-weight: 400;
+          }
+          .answer-btn:hover { border-color: var(--accent); background: rgba(91,92,246,.05); color: var(--accent); }
+        </style>
 
-        <script>
-          const bizQuestions = {
-            "Plumber or Tradesperson": {
-              q: "What's the biggest time-drain in your week?",
-              options: ["Answering the same questions over and over", "Chasing customers for payment or approval", "Writing up quotes and following up", "Missed calls when I'm on a job"]
-            },
-            "Restaurant or Café": {
-              q: "What would make the biggest difference to your business?",
-              options: ["Filling more tables / taking more bookings", "Saving time on social media and marketing", "Handling customer queries and reservations automatically", "Getting more reviews and responding to them"]
-            },
-            "Hair Salon or Beauty Business": {
-              q: "Where do you lose the most time or money?",
-              options: ["No-shows and last-minute cancellations", "Manual booking and reminder messages", "Writing content for Instagram and Facebook", "Responding to enquiries outside opening hours"]
-            },
-            "Accountant or Solicitor": {
-              q: "What takes up more of your time than it should?",
-              options: ["Answering routine client queries", "Chasing documents and information from clients", "Writing reports, letters, or emails", "Following up on leads and proposals"]
-            },
-            "Retail Shop": {
-              q: "What's your biggest challenge right now?",
-              options: ["Getting more customers through the door / online", "Managing customer questions and orders", "Creating content and promotions", "Following up with customers after a purchase"]
-            },
-            "Fitness or Health Coach": {
-              q: "What would help your business most?",
-              options: ["Booking and managing client sessions automatically", "Nurturing leads who don't book straight away", "Creating workout plans, content, or emails faster", "Staying on top of client check-ins and follow-ups"]
-            },
-            "Estate Agent or Letting Agent": {
-              q: "Where does your team spend too much time?",
-              options: ["Answering basic property enquiries", "Chasing landlords, tenants, or buyers for information", "Writing property descriptions and listings", "Following up with leads who've gone quiet"]
-            },
-            "Childcare or Nursery": {
-              q: "What would make your life easier?",
-              options: ["Handling parent enquiries and waiting list queries", "Sending updates, reminders, and newsletters to parents", "Admin and paperwork taking too long", "Getting more local families to find and trust us"]
-            },
-            "Other small or medium business": {
-              q: "What's the biggest challenge in your business right now?",
-              options: ["Responding to enquiries quickly enough", "Too much repetitive admin eating into my day", "Getting new customers and following up on leads", "Creating content and marketing materials"]
-            }
-          };
+        <script>
+          const bizQuestions = {
+            "Plumber or Tradesperson": {
+              q: "What's the biggest time-drain in your week?",
+              options: ["Answering the same questions over and over", "Chasing customers for payment or approval", "Writing up quotes and following up", "Missed calls when I'm on a job"]
+            },
+            "Restaurant or Café": {
+              q: "What would make the biggest difference to your business?",
+              options: ["Filling more tables / taking more bookings", "Saving time on social media and marketing", "Handling customer queries and reservations automatically", "Getting more reviews and responding to them"]
+            },
+            "Hair Salon or Beauty Business": {
+              q: "Where do you lose the most time or money?",
+              options: ["No-shows and last-minute cancellations", "Manual booking and reminder messages", "Writing content for Instagram and Facebook", "Responding to enquiries outside opening hours"]
+            },
+            "Accountant or Solicitor": {
+              q: "What takes up more of your time than it should?",
+              options: ["Answering routine client queries", "Chasing documents and information from clients", "Writing reports, letters, or emails", "Following up on leads and proposals"]
+            },
+            "Retail Shop": {
+              q: "What's your biggest challenge right now?",
+              options: ["Getting more customers through the door / online", "Managing customer questions and orders", "Creating content and promotions", "Following up with customers after a purchase"]
+            },
+            "Fitness or Health Coach": {
+              q: "What would help your business most?",
+              options: ["Booking and managing client sessions automatically", "Nurturing leads who don't book straight away", "Creating workout plans, content, or emails faster", "Staying on top of client check-ins and follow-ups"]
+            },
+            "Estate Agent or Letting Agent": {
+              q: "Where does your team spend too much time?",
+              options: ["Answering basic property enquiries", "Chasing landlords, tenants, or buyers for information", "Writing property descriptions and listings", "Following up with leads who've gone quiet"]
+            },
+            "Childcare or Nursery": {
+              q: "What would make your life easier?",
+              options: ["Handling parent enquiries and waiting list queries", "Sending updates, reminders, and newsletters to parents", "Admin and paperwork taking too long", "Getting more local families to find and trust us"]
+            },
+            "Other small or medium business": {
+              q: "What's the biggest challenge in your business right now?",
+              options: ["Responding to enquiries quickly enough", "Too much repetitive admin eating into my day", "Getting new customers and following up on leads", "Creating content and marketing materials"]
+            }
+          };
 
-          let selectedBiz = '';
-          let selectedAnswer = '';
+          let selectedBiz = '';
+          let selectedAnswer = '';
 
-          function selectBiz(btn) {
-            selectedBiz = btn.dataset.biz;
-            document.getElementById('demo-step-1').style.display = 'none';
-            const step2 = document.getElementById('demo-step-2');
-            step2.style.display = 'block';
-            const data = bizQuestions[selectedBiz];
-            document.getElementById('demo-question').textContent = data.q;
-            const optWrap = document.getElementById('demo-options');
-            optWrap.innerHTML = '';
-            data.options.forEach(opt => {
-              const b = document.createElement('button');
-              b.className = 'answer-btn';
-              b.textContent = opt;
-              b.onclick = () => selectAnswer(opt);
-              optWrap.appendChild(b);
-            });
-          }
+          function selectBiz(btn) {
+            selectedBiz = btn.dataset.biz;
+            document.getElementById('demo-step-1').style.display = 'none';
+            const step2 = document.getElementById('demo-step-2');
+            step2.style.display = 'block';
+            const data = bizQuestions[selectedBiz];
+            document.getElementById('demo-question').textContent = data.q;
+            const optWrap = document.getElementById('demo-options');
+            optWrap.innerHTML = '';
+            data.options.forEach(opt => {
+              const b = document.createElement('button');
+              b.className = 'answer-btn';
+              b.textContent = opt;
+              b.onclick = () => selectAnswer(opt);
+              optWrap.appendChild(b);
+            });
+          }
 
-          function selectAnswer(answer) {
-            selectedAnswer = answer;
-            document.getElementById('demo-step-2').style.display = 'none';
-            document.getElementById('demo-step-3').style.display = 'block';
-            document.getElementById('demo-typing').style.display = 'flex';
-            document.getElementById('demo-response-text').style.display = 'none';
-            document.getElementById('demo-ctas').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
-            callAI();
-          }
+          function selectAnswer(answer) {
+            selectedAnswer = answer;
+            document.getElementById('demo-step-2').style.display = 'none';
+            document.getElementById('demo-step-3').style.display = 'block';
+            document.getElementById('demo-typing').style.display = 'flex';
+            document.getElementById('demo-response-text').style.display = 'none';
+            document.getElementById('demo-ctas').style.display = 'none';
+            document.getElementById('demo-stat').style.display = 'none';
+            callAI();
+          }
 
-          async function callAI() {
-            try {
-              const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  businessType: selectedBiz,
-                  challenge: selectedAnswer
-                })
-              });
+          async function callAI() {
+            try {
+              const response = await fetch('https://api.anthropic.com/v1/messages', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  model: 'claude-sonnet-4-20250514',
+                  max_tokens: 300,
+                  system: `You are a friendly local AI consultant from Hastings chatting casually with a small business owner.
 
-              if (!response.ok) throw new Error('Proxy error');
-              const parsed = await response.json();
+Respond ONLY with a valid JSON object — no markdown, no code fences, nothing else. Format:
+{"message": "...", "statNum": "...", "statLabel": "...", "statSub": "..."}
 
-              const text = parsed.message || "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
-              const statNum = parsed.statNum || '4 hrs';
-              const statLabel = parsed.statLabel || 'saved per week';
-              const statSub = parsed.statSub || 'on average for similar businesses';
+message: EXACTLY 3 very short sentences, each separated by \\n\\n.
+  - Sentence 1: Start with "Oh," or "Yeah," or "Honestly," — empathise warmly. Max 15 words.
+  - Sentence 2: ONE specific AI agent that solves their exact problem. Concrete and real. Max 20 words.
+  - Sentence 3: The upbeat result — time saved, money made, stress gone. Max 15 words.
+statNum: A punchy time/money stat relevant to this business + challenge (e.g. "4 hrs", "£200", "3 hrs", "6 hrs"). Keep it realistic and specific.
+statLabel: 3–5 word label for the stat (e.g. "saved on admin weekly", "recovered in missed leads").
+statSub: One short supporting phrase (e.g. "on average, per week" or "per month for similar businesses").
 
-              document.getElementById('demo-typing').style.display = 'none';
-              const responseEl = document.getElementById('demo-response-text');
-              responseEl.style.display = 'block';
+Sound like a friendly local expert. No jargon. No waffle.`,
+                  messages: [{
+                    role: 'user',
+                    content: `Business type: ${selectedBiz}\nBiggest challenge: ${selectedAnswer}\n\nPlease respond with the JSON object.`
+                  }]
+                })
+              });
 
-              // Typewriter effect
-              let i = 0;
-              responseEl.textContent = '';
-              function typeChar() {
-                if (i < text.length) {
-                  responseEl.textContent += text[i];
-                  i++;
-                  setTimeout(typeChar, 18);
-                } else {
-                  // Pop in the stat
-                  const statEl = document.getElementById('demo-stat');
-                  document.getElementById('demo-stat-num').textContent = statNum;
-                  document.getElementById('demo-stat-label').textContent = statLabel;
-                  document.getElementById('demo-stat-sub').textContent = statSub;
-                  statEl.style.opacity = '0';
-                  statEl.style.transform = 'translateY(8px)';
-                  statEl.style.transition = 'opacity .45s ease, transform .45s ease';
-                  statEl.style.display = 'flex';
-                  requestAnimationFrame(() => requestAnimationFrame(() => {
-                    statEl.style.opacity = '1';
-                    statEl.style.transform = 'translateY(0)';
-                  }));
-                  document.getElementById('demo-ctas').style.display = 'flex';
-                }
-              }
-              typeChar();
+              const data = await response.json();
+              const raw = data.content?.[0]?.text || '{}';
+              let parsed;
+              try { parsed = JSON.parse(raw); } catch(e) { parsed = {}; }
 
-            } catch(e) {
-              document.getElementById('demo-typing').style.display = 'none';
-              const responseEl = document.getElementById('demo-response-text');
-              responseEl.style.display = 'block';
-              responseEl.textContent = "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
-              const statEl = document.getElementById('demo-stat');
-              document.getElementById('demo-stat-num').textContent = '4 hrs';
-              document.getElementById('demo-stat-label').textContent = 'saved per week';
-              document.getElementById('demo-stat-sub').textContent = 'on average for similar businesses';
-              statEl.style.display = 'flex';
-              document.getElementById('demo-ctas').style.display = 'flex';
-            }
-          }
+              const text = parsed.message || "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
+              const statNum = parsed.statNum || '4 hrs';
+              const statLabel = parsed.statLabel || 'saved per week';
+              const statSub = parsed.statSub || 'on average for similar businesses';
 
-          function goBack() {
-            document.getElementById('demo-step-2').style.display = 'none';
-            document.getElementById('demo-step-1').style.display = 'block';
-          }
+              document.getElementById('demo-typing').style.display = 'none';
+              const responseEl = document.getElementById('demo-response-text');
+              responseEl.style.display = 'block';
 
-          function resetDemo() {
-            document.getElementById('demo-step-3').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
-            document.getElementById('demo-step-1').style.display = 'block';
-          }
-        </script>
-      </div>
+              // Typewriter effect
+              let i = 0;
+              responseEl.textContent = '';
+              function typeChar() {
+                if (i < text.length) {
+                  responseEl.textContent += text[i];
+                  i++;
+                  setTimeout(typeChar, 18);
+                } else {
+                  // Pop in the stat
+                  const statEl = document.getElementById('demo-stat');
+                  document.getElementById('demo-stat-num').textContent = statNum;
+                  document.getElementById('demo-stat-label').textContent = statLabel;
+                  document.getElementById('demo-stat-sub').textContent = statSub;
+                  statEl.style.opacity = '0';
+                  statEl.style.transform = 'translateY(8px)';
+                  statEl.style.transition = 'opacity .45s ease, transform .45s ease';
+                  statEl.style.display = 'flex';
+                  requestAnimationFrame(() => requestAnimationFrame(() => {
+                    statEl.style.opacity = '1';
+                    statEl.style.transform = 'translateY(0)';
+                  }));
+                  document.getElementById('demo-ctas').style.display = 'flex';
+                }
+              }
+              typeChar();
 
-      <div class="agent-card fade-up">
-        <div class="agent-icon ic-teal">✍️</div>
-        <div class="agent-name">Content Agent</div>
-        <div class="agent-desc">Writes blog posts, social captions, email campaigns, and product descriptions — in your voice, ready to publish. Hours of work done in minutes.</div>
-        <div class="agent-tag">✦ Saves 4–6hrs/week</div>
-      </div>
+            } catch(e) {
+              document.getElementById('demo-typing').style.display = 'none';
+              const responseEl = document.getElementById('demo-response-text');
+              responseEl.style.display = 'block';
+              responseEl.textContent = "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
+              const statEl = document.getElementById('demo-stat');
+              document.getElementById('demo-stat-num').textContent = '4 hrs';
+              document.getElementById('demo-stat-label').textContent = 'saved per week';
+              document.getElementById('demo-stat-sub').textContent = 'on average for similar businesses';
+              statEl.style.display = 'flex';
+              document.getElementById('demo-ctas').style.display = 'flex';
+            }
+          }
 
-      <div class="agent-card fade-up">
-        <div class="agent-icon ic-amber">⭐</div>
-        <div class="agent-name">Review Agent</div>
-        <div class="agent-desc">Monitors your Google, Facebook, and Trustpilot reviews. Drafts thoughtful replies in your tone and sends alerts for urgent feedback. Your reputation, protected.</div>
-        <div class="agent-tag">✦ Reputation on autopilot</div>
-      </div>
+          function goBack() {
+            document.getElementById('demo-step-2').style.display = 'none';
+            document.getElementById('demo-step-1').style.display = 'block';
+          }
 
-      <div class="agent-card fade-up">
-        <div class="agent-icon ic-pink">📧</div>
-        <div class="agent-name">Follow-Up Agent</div>
-        <div class="agent-desc">Automatically follows up on quotes, unanswered enquiries, and dormant leads. Turns missed opportunities into booked jobs — without you lifting a finger.</div>
-        <div class="agent-tag">✦ Recovers lost revenue</div>
-      </div>
+          function resetDemo() {
+            document.getElementById('demo-step-3').style.display = 'none';
+            document.getElementById('demo-stat').style.display = 'none';
+            document.getElementById('demo-step-1').style.display = 'block';
+          }
+        </script>
+      </div>
 
-      <div class="agent-card fade-up">
-        <div class="agent-icon ic-green">📊</div>
-        <div class="agent-name">Insight Agent</div>
-        <div class="agent-desc">Analyses your reviews, enquiries, and website traffic to surface what's working and what isn't. Plain-English weekly report, no dashboards to dig through.</div>
-        <div class="agent-tag">✦ Know your numbers</div>
-      </div>
+      <div class="agent-card fade-up">
+        <div class="agent-icon ic-teal">✍️</div>
+        <div class="agent-name">Content Agent</div>
+        <div class="agent-desc">Writes blog posts, social captions, email campaigns, and product descriptions — in your voice, ready to publish. Hours of work done in minutes.</div>
+        <div class="agent-tag">✦ Saves 4–6hrs/week</div>
+      </div>
 
-      <div class="agent-card fade-up">
-        <div class="agent-icon ic-blue">🌐</div>
-        <div class="agent-name" style="display:flex;align-items:center;gap:.6rem">
-          Web Design
-          <span style="font-size:.65rem;background:#eef0f5;border:1px solid #dde1ea;color:#6b7280;padding:.18rem .55rem;border-radius:10px;font-weight:500">Add-on</span>
-        </div>
-        <div class="agent-desc">A beautifully built website that works perfectly alongside your AI agents — connected, fast, and designed to convert visitors into customers.</div>
-        <div class="agent-tag">✦ Optional add-on to any plan</div>
-      </div>
+      <div class="agent-card fade-up">
+        <div class="agent-icon ic-amber">⭐</div>
+        <div class="agent-name">Review Agent</div>
+        <div class="agent-desc">Monitors your Google, Facebook, and Trustpilot reviews. Drafts thoughtful replies in your tone and sends alerts for urgent feedback. Your reputation, protected.</div>
+        <div class="agent-tag">✦ Reputation on autopilot</div>
+      </div>
 
-    </div>
-  </div>
+      <div class="agent-card fade-up">
+        <div class="agent-icon ic-pink">📧</div>
+        <div class="agent-name">Follow-Up Agent</div>
+        <div class="agent-desc">Automatically follows up on quotes, unanswered enquiries, and dormant leads. Turns missed opportunities into booked jobs — without you lifting a finger.</div>
+        <div class="agent-tag">✦ Recovers lost revenue</div>
+      </div>
+
+      <div class="agent-card fade-up">
+        <div class="agent-icon ic-green">📊</div>
+        <div class="agent-name">Insight Agent</div>
+        <div class="agent-desc">Analyses your reviews, enquiries, and website traffic to surface what's working and what isn't. Plain-English weekly report, no dashboards to dig through.</div>
+        <div class="agent-tag">✦ Know your numbers</div>
+      </div>
+
+      <div class="agent-card fade-up">
+        <div class="agent-icon ic-blue">🌐</div>
+        <div class="agent-name" style="display:flex;align-items:center;gap:.6rem">
+          Web Design
+          <span style="font-size:.65rem;background:#eef0f5;border:1px solid #dde1ea;color:#6b7280;padding:.18rem .55rem;border-radius:10px;font-weight:500">Add-on</span>
+        </div>
+        <div class="agent-desc">A beautifully built website that works perfectly alongside your AI agents — connected, fast, and designed to convert visitors into customers.</div>
+        <div class="agent-tag">✦ Optional add-on to any plan</div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
+<!-- PRICING -->
 <section class="pricing-section" id="pricing">
-  <div class="inner" style="text-align:center">
-    <span class="eyebrow fade-up">Pricing</span>
-    <h2 class="section-title fade-up">One small build fee.<br>One simple monthly.</h2>
-    <p class="section-sub fade-up">A one-off setup fee gets everything built and configured. Your monthly covers hosting, AI tokens, support, and continuous improvements — so it always gets smarter.</p>
+  <div class="inner" style="text-align:center">
+    <span class="eyebrow fade-up">Pricing</span>
+    <h2 class="section-title fade-up">One small build fee.<br>One simple monthly.</h2>
+    <p class="section-sub fade-up">A one-off setup fee gets everything built and configured. Your monthly covers hosting, AI tokens, support, and continuous improvements — so it always gets smarter.</p>
 
-    <div class="pricing-toggle" id="billing-toggle">
-      <span class="toggle-label active" id="monthly-lbl">Monthly</span>
-      <div class="toggle-track" id="toggle-btn" onclick="toggleBilling()">
-        <div class="toggle-thumb"></div>
-      </div>
-      <span class="toggle-label" id="annual-lbl">Annual</span>
-      <span class="toggle-save">Save 20%</span>
-    </div>
+    <div class="pricing-toggle" id="billing-toggle">
+      <span class="toggle-label active" id="monthly-lbl">Monthly</span>
+      <div class="toggle-track" id="toggle-btn" onclick="toggleBilling()">
+        <div class="toggle-thumb"></div>
+      </div>
+      <span class="toggle-label" id="annual-lbl">Annual</span>
+      <span class="toggle-save">Save 20%</span>
+    </div>
 
-    <div class="plans-grid">
+    <div class="plans-grid">
 
-            <div class="plan-card fade-up">
-        <div class="plan-badge badge-purple">Starter</div>
-        <div class="plan-name">AI Essentials</div>
-        <div class="plan-tagline">Your first AI agent, fully set up and working — the ideal starting point.</div>
-        <div class="plan-build">
-          <div class="plan-build-label">Build Fee — one-off</div>
-          <div class="plan-build-price">£299 <span>paid once</span></div>
-        </div>
-        <div class="plan-monthly">
-          <div class="plan-monthly-label">Then monthly</div>
-          <div class="plan-monthly-price"><span class="price-val" data-monthly="79" data-annual="63">£79</span><span>/mo</span></div>
-          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · email support</div>
-        </div>
-        <ul class="plan-includes">
-          <li class="inc-bold">1 custom AI agent (your choice)</li>
-          <li>Agent trained on your business</li>
-          <li>Plain-English onboarding session</li>
-          <li>AI token allowance (up to 5k chats/mo)</li>
-          <li>Secure cloud hosting</li>
-          <li>Email support</li>
-          <li>Monthly performance summary</li>
-        </ul>
-        <a href="#contact" class="plan-cta cta-outline">Get Started →</a>
-      </div>
+      <!-- Starter -->
+      <div class="plan-card fade-up">
+        <div class="plan-badge badge-purple">Starter</div>
+        <div class="plan-name">AI Essentials</div>
+        <div class="plan-tagline">Your first AI agent, fully set up and working — the ideal starting point.</div>
+        <div class="plan-build">
+          <div class="plan-build-label">Build Fee — one-off</div>
+          <div class="plan-build-price">£299 <span>paid once</span></div>
+        </div>
+        <div class="plan-monthly">
+          <div class="plan-monthly-label">Then monthly</div>
+          <div class="plan-monthly-price"><span class="price-val" data-monthly="79" data-annual="63">£79</span><span>/mo</span></div>
+          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · email support</div>
+        </div>
+        <ul class="plan-includes">
+          <li class="inc-bold">1 custom AI agent (your choice)</li>
+          <li>Agent trained on your business</li>
+          <li>Plain-English onboarding session</li>
+          <li>AI token allowance (up to 5k chats/mo)</li>
+          <li>Secure cloud hosting</li>
+          <li>Email support</li>
+          <li>Monthly performance summary</li>
+        </ul>
+        <a href="#contact" class="plan-cta cta-outline">Get Started →</a>
+      </div>
 
-            <div class="plan-card plan-featured fade-up">
-        <div class="plan-badge badge-gradient">Most Popular</div>
-        <div class="plan-name">AI Pro</div>
-        <div class="plan-tagline">Multiple agents working together — the full AI team for your business.</div>
-        <div class="plan-build">
-          <div class="plan-build-label">Build Fee — one-off</div>
-          <div class="plan-build-price">£599 <span>paid once</span></div>
-        </div>
-        <div class="plan-monthly">
-          <div class="plan-monthly-label">Then monthly</div>
-          <div class="plan-monthly-price"><span class="price-val" data-monthly="149" data-annual="119">£149</span><span>/mo</span></div>
-          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · priority support</div>
-        </div>
-        <ul class="plan-includes">
-          <li class="inc-bold">Up to 3 custom AI agents</li>
-          <li>All Essentials features</li>
-          <li>Higher AI token allowance (20k chats/mo)</li>
-          <li>Priority support + monthly strategy call</li>
-          <li>Agent improvements every quarter</li>
-          <li>Review management agent included</li>
-          <li class="inc-bold">Website add-on available (from +£499 build)</li>
-        </ul>
-        <a href="#contact" class="plan-cta cta-accent">Get Started →</a>
-      </div>
+      <!-- Pro (featured) -->
+      <div class="plan-card plan-featured fade-up">
+        <div class="plan-badge badge-gradient">Most Popular</div>
+        <div class="plan-name">AI Pro</div>
+        <div class="plan-tagline">Multiple agents working together — the full AI team for your business.</div>
+        <div class="plan-build">
+          <div class="plan-build-label">Build Fee — one-off</div>
+          <div class="plan-build-price">£599 <span>paid once</span></div>
+        </div>
+        <div class="plan-monthly">
+          <div class="plan-monthly-label">Then monthly</div>
+          <div class="plan-monthly-price"><span class="price-val" data-monthly="149" data-annual="119">£149</span><span>/mo</span></div>
+          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · priority support</div>
+        </div>
+        <ul class="plan-includes">
+          <li class="inc-bold">Up to 3 custom AI agents</li>
+          <li>All Essentials features</li>
+          <li>Higher AI token allowance (20k chats/mo)</li>
+          <li>Priority support + monthly strategy call</li>
+          <li>Agent improvements every quarter</li>
+          <li>Review management agent included</li>
+          <li class="inc-bold">Website add-on available (from +£499 build)</li>
+        </ul>
+        <a href="#contact" class="plan-cta cta-accent">Get Started →</a>
+      </div>
 
-            <div class="plan-card fade-up">
-        <div class="plan-badge badge-teal">Full Package</div>
-        <div class="plan-name">AI Pro + Website</div>
-        <div class="plan-tagline">The complete package — agents, website, and everything running together seamlessly.</div>
-        <div class="plan-build">
-          <div class="plan-build-label">Build Fee — one-off</div>
-          <div class="plan-build-price">£999 <span>paid once</span></div>
-        </div>
-        <div class="plan-monthly">
-          <div class="plan-monthly-label">Then monthly</div>
-          <div class="plan-monthly-price"><span class="price-val" data-monthly="179" data-annual="143">£179</span><span>/mo</span></div>
-          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · website · support</div>
-        </div>
-        <ul class="plan-includes">
-          <li class="inc-bold">Everything in AI Pro</li>
-          <li class="inc-bold">Bespoke website (up to 8 pages)</li>
-          <li>Website hosting included</li>
-          <li>AI agents integrated into site</li>
-          <li>SEO foundations built in</li>
-          <li>Quarterly website reviews</li>
-          <li>All future agent improvements</li>
-        </ul>
-        <a href="#contact" class="plan-cta cta-outline">Get Started →</a>
-      </div>
+      <!-- Website Bundle -->
+      <div class="plan-card fade-up">
+        <div class="plan-badge badge-teal">Full Package</div>
+        <div class="plan-name">AI Pro + Website</div>
+        <div class="plan-tagline">The complete package — agents, website, and everything running together seamlessly.</div>
+        <div class="plan-build">
+          <div class="plan-build-label">Build Fee — one-off</div>
+          <div class="plan-build-price">£999 <span>paid once</span></div>
+        </div>
+        <div class="plan-monthly">
+          <div class="plan-monthly-label">Then monthly</div>
+          <div class="plan-monthly-price"><span class="price-val" data-monthly="179" data-annual="143">£179</span><span>/mo</span></div>
+          <div class="plan-monthly-breakdown">Includes hosting · AI tokens · website · support</div>
+        </div>
+        <ul class="plan-includes">
+          <li class="inc-bold">Everything in AI Pro</li>
+          <li class="inc-bold">Bespoke website (up to 8 pages)</li>
+          <li>Website hosting included</li>
+          <li>AI agents integrated into site</li>
+          <li>SEO foundations built in</li>
+          <li>Quarterly website reviews</li>
+          <li>All future agent improvements</li>
+        </ul>
+        <a href="#contact" class="plan-cta cta-outline">Get Started →</a>
+      </div>
 
-    </div>
+    </div>
 
-    <div class="pricing-explainer fade-up">
-      <div class="pe-item">
-        <div class="pe-title">🔨 What's the build fee?</div>
-        <div class="pe-desc">This is a one-off payment that covers our time setting everything up — training your agents on your business, configuring the tools, and onboarding you. You pay it once and you're set.</div>
-      </div>
-      <div class="pe-item">
-        <div class="pe-title">📅 What does monthly cover?</div>
-        <div class="pe-desc">Your monthly includes cloud hosting, AI token usage (the "fuel" that powers your agents), ongoing support, security, and continuous agent improvements as AI technology evolves.</div>
-      </div>
-      <div class="pe-item">
-        <div class="pe-title">🔓 Am I locked in?</div>
-        <div class="pe-desc">No long-term contracts. Monthly plans can be cancelled with 30 days notice. Annual plans are discounted but flexible too. Your agents and website always belong to you.</div>
-      </div>
-    </div>
-  </div>
+    <div class="pricing-explainer fade-up">
+      <div class="pe-item">
+        <div class="pe-title">🔨 What's the build fee?</div>
+        <div class="pe-desc">This is a one-off payment that covers our time setting everything up — training your agents on your business, configuring the tools, and onboarding you. You pay it once and you're set.</div>
+      </div>
+      <div class="pe-item">
+        <div class="pe-title">📅 What does monthly cover?</div>
+        <div class="pe-desc">Your monthly includes cloud hosting, AI token usage (the "fuel" that powers your agents), ongoing support, security, and continuous agent improvements as AI technology evolves.</div>
+      </div>
+      <div class="pe-item">
+        <div class="pe-title">🔓 Am I locked in?</div>
+        <div class="pe-desc">No long-term contracts. Monthly plans can be cancelled with 30 days notice. Annual plans are discounted but flexible too. Your agents and website always belong to you.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="how-section" id="how">
-  <div class="inner">
-    <span class="eyebrow fade-up">How It Works</span>
-    <h2 class="section-title fade-up">We do the heavy lifting.<br>You see the results.</h2>
-    <p class="section-sub fade-up" style="margin:0">From first chat to live agents — here's exactly what happens.</p>
+  <div class="inner">
+    <span class="eyebrow fade-up">How It Works</span>
+    <h2 class="section-title fade-up">We do the heavy lifting.<br>You see the results.</h2>
+    <p class="section-sub fade-up" style="margin:0">From first chat to live agents — here's exactly what happens.</p>
 
-    <div class="how-grid">
-      <div class="how-sticky">
-        <div class="how-steps" id="how-steps">
-          <div class="how-step active" data-demo="0">
-            <div class="how-step-num">01</div>
-            <div><h3>Free Discovery Call</h3><p>We learn about your business — the repetitive tasks, the missed calls, the time-sinks. We map out which agents will have the biggest impact for you specifically.</p></div>
-          </div>
-          <div class="how-step" data-demo="1">
-            <div class="how-step-num">02</div>
-            <div><h3>We Build Your Agents</h3><p>We configure and train each agent on your business — your products, prices, tone of voice, FAQs, and processes. Usually ready within 5–7 working days.</p></div>
-          </div>
-          <div class="how-step" data-demo="2">
-            <div class="how-step-num">03</div>
-            <div><h3>Plain-English Handover</h3><p>We sit with you (virtually or in person in Hastings) and walk through everything — no jargon. You'll know exactly what each agent does and how to adjust it.</p></div>
-          </div>
-          <div class="how-step" data-demo="3">
-            <div class="how-step-num">04</div>
-            <div><h3>Live — and Getting Smarter</h3><p>Your agents go live. We monitor performance, send you plain-English summaries, and make improvements each quarter. The longer it runs, the better it gets.</p></div>
-          </div>
-        </div>
-      </div>
+    <div class="how-grid">
+      <div class="how-sticky">
+        <div class="how-steps" id="how-steps">
+          <div class="how-step active" data-demo="0">
+            <div class="how-step-num">01</div>
+            <div><h3>Free Discovery Call</h3><p>We learn about your business — the repetitive tasks, the missed calls, the time-sinks. We map out which agents will have the biggest impact for you specifically.</p></div>
+          </div>
+          <div class="how-step" data-demo="1">
+            <div class="how-step-num">02</div>
+            <div><h3>We Build Your Agents</h3><p>We configure and train each agent on your business — your products, prices, tone of voice, FAQs, and processes. Usually ready within 5–7 working days.</p></div>
+          </div>
+          <div class="how-step" data-demo="2">
+            <div class="how-step-num">03</div>
+            <div><h3>Plain-English Handover</h3><p>We sit with you (virtually or in person in Hastings) and walk through everything — no jargon. You'll know exactly what each agent does and how to adjust it.</p></div>
+          </div>
+          <div class="how-step" data-demo="3">
+            <div class="how-step-num">04</div>
+            <div><h3>Live — and Getting Smarter</h3><p>Your agents go live. We monitor performance, send you plain-English summaries, and make improvements each quarter. The longer it runs, the better it gets.</p></div>
+          </div>
+        </div>
+      </div>
 
-      <div class="how-demo-panel" id="how-demos">
-        <div class="how-demo active" data-index="0">
-          <div class="demo-label">✦ Discovery — What We Ask</div>
-          <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.84rem;">
-            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What's the most common question you get from customers?"</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What tasks eat up most of your week?"</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What happens to enquiries that come in at 9pm?"</div>
-            <div style="background:rgba(48,217,196,.06);border:1px solid rgba(48,217,196,.15);border-radius:10px;padding:.7rem 1rem;color:var(--teal)">→ We map the perfect agent setup in 30 minutes</div>
-          </div>
-        </div>
-        <div class="how-demo" data-index="1">
-          <div class="demo-label">✦ Build — What Goes In</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;font-size:.83rem">
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📋 Your FAQs & pricing</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">🗣️ Your tone of voice</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📅 Booking rules & availability</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📍 Your area & services</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">⚠️ Things it should never say</div>
-            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">🔗 Your existing systems</div>
-          </div>
-        </div>
-        <div class="how-demo" data-index="2">
-          <div class="demo-label">✦ Handover — What You Get</div>
-          <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.83rem">
-            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">A live demo of every agent, in plain English</span></div>
-            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">A one-page cheat sheet of what each agent does</span></div>
-            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">How to update it when your prices change</span></div>
-            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">Our number for any questions (we answer fast)</span></div>
-          </div>
-        </div>
-        <div class="how-demo" data-index="3">
-          <div class="demo-label">✦ Month 1 — Real Results</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;text-align:center;font-size:.83rem">
-            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
-              <div style="font-size:1.6rem;font-weight:700;color:var(--accent)">24/7</div>
-              <div style="color:var(--mid);margin-top:.2rem">Enquiries answered</div>
-            </div>
-            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
-              <div style="font-size:1.6rem;font-weight:700;color:var(--teal)">~4hrs</div>
-              <div style="color:var(--mid);margin-top:.2rem">Admin saved weekly</div>
-            </div>
-            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
-              <div style="font-size:1.6rem;font-weight:700;color:#ffd60a">+31%</div>
-              <div style="color:var(--mid);margin-top:.2rem">Lead conversion</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="how-demo-panel" id="how-demos">
+        <div class="how-demo active" data-index="0">
+          <div class="demo-label">✦ Discovery — What We Ask</div>
+          <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.84rem;">
+            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What's the most common question you get from customers?"</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What tasks eat up most of your week?"</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.7rem 1rem;color:#374151">💬 "What happens to enquiries that come in at 9pm?"</div>
+            <div style="background:rgba(48,217,196,.06);border:1px solid rgba(48,217,196,.15);border-radius:10px;padding:.7rem 1rem;color:var(--teal)">→ We map the perfect agent setup in 30 minutes</div>
+          </div>
+        </div>
+        <div class="how-demo" data-index="1">
+          <div class="demo-label">✦ Build — What Goes In</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;font-size:.83rem">
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📋 Your FAQs & pricing</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">🗣️ Your tone of voice</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📅 Booking rules & availability</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">📍 Your area & services</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">⚠️ Things it should never say</div>
+            <div style="background:#f1f3f9;border-radius:10px;padding:.75rem">🔗 Your existing systems</div>
+          </div>
+        </div>
+        <div class="how-demo" data-index="2">
+          <div class="demo-label">✦ Handover — What You Get</div>
+          <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.83rem">
+            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">A live demo of every agent, in plain English</span></div>
+            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">A one-page cheat sheet of what each agent does</span></div>
+            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">How to update it when your prices change</span></div>
+            <div style="display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--teal);font-weight:700">✓</span><span style="color:#374151">Our number for any questions (we answer fast)</span></div>
+          </div>
+        </div>
+        <div class="how-demo" data-index="3">
+          <div class="demo-label">✦ Month 1 — Real Results</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;text-align:center;font-size:.83rem">
+            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
+              <div style="font-size:1.6rem;font-weight:700;color:var(--accent)">24/7</div>
+              <div style="color:var(--mid);margin-top:.2rem">Enquiries answered</div>
+            </div>
+            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
+              <div style="font-size:1.6rem;font-weight:700;color:var(--teal)">~4hrs</div>
+              <div style="color:var(--mid);margin-top:.2rem">Admin saved weekly</div>
+            </div>
+            <div style="background:#f1f3f9;border-radius:12px;padding:1rem">
+              <div style="font-size:1.6rem;font-weight:700;color:#ffd60a">+31%</div>
+              <div style="color:var(--mid);margin-top:.2rem">Lead conversion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- WHAT'S INCLUDED MONTHLY -->
 <section class="included-section">
-  <div class="inner">
-    <span class="eyebrow fade-up">Your Monthly — Unpacked</span>
-    <h2 class="section-title fade-up">Everything's included.<br>No nasty surprises.</h2>
-    <p class="section-sub fade-up">Your monthly subscription isn't just a "maintenance fee" — it's the engine that keeps your AI agents smart, live, and improving.</p>
-    <div class="included-grid">
-      <div class="inc-card fade-up">
-        <div class="inc-icon">⚡</div>
-        <div class="inc-name">AI Token Allowance</div>
-        <div class="inc-desc">Tokens are the "fuel" your agents run on. Your plan includes a generous monthly allowance — no surprise bills when customers chat.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">☁️</div>
-        <div class="inc-name">Secure Cloud Hosting</div>
-        <div class="inc-desc">Your agents and website live on fast, secure UK-based servers. Backups run daily. Uptime is monitored around the clock.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">🔧</div>
-        <div class="inc-name">Ongoing Support</div>
-        <div class="inc-desc">We're a real local team, not a ticket system. Email or call us and you'll hear back fast — usually same day.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">📈</div>
-        <div class="inc-name">Quarterly Agent Updates</div>
-        <div class="inc-desc">AI moves fast. We review and improve your agents every quarter, so you always benefit from the latest models and techniques.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">📋</div>
-        <div class="inc-name">Monthly Performance Report</div>
-        <div class="inc-desc">A plain-English summary every month — how many chats handled, leads captured, hours saved. No spreadsheets, just the headline numbers.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">🔒</div>
-        <div class="inc-name">Security & Compliance</div>
-        <div class="inc-desc">Your customer data is handled responsibly and compliantly. We keep up with AI regulations so you don't have to.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">🌐</div>
-        <div class="inc-name">Website Hosting (Full Package)</div>
-        <div class="inc-desc">On the Full Package, your website hosting is included — SSL, daily backups, speed optimisation, and minor content updates.</div>
-      </div>
-      <div class="inc-card fade-up">
-        <div class="inc-icon">🧠</div>
-        <div class="inc-name">Continuous Learning</div>
-        <div class="inc-desc">Your agents get smarter over time as they handle more of your customers. We fine-tune them based on real conversations.</div>
-      </div>
-    </div>
-  </div>
+  <div class="inner">
+    <span class="eyebrow fade-up">Your Monthly — Unpacked</span>
+    <h2 class="section-title fade-up">Everything's included.<br>No nasty surprises.</h2>
+    <p class="section-sub fade-up">Your monthly subscription isn't just a "maintenance fee" — it's the engine that keeps your AI agents smart, live, and improving.</p>
+    <div class="included-grid">
+      <div class="inc-card fade-up">
+        <div class="inc-icon">⚡</div>
+        <div class="inc-name">AI Token Allowance</div>
+        <div class="inc-desc">Tokens are the "fuel" your agents run on. Your plan includes a generous monthly allowance — no surprise bills when customers chat.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">☁️</div>
+        <div class="inc-name">Secure Cloud Hosting</div>
+        <div class="inc-desc">Your agents and website live on fast, secure UK-based servers. Backups run daily. Uptime is monitored around the clock.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">🔧</div>
+        <div class="inc-name">Ongoing Support</div>
+        <div class="inc-desc">We're a real local team, not a ticket system. Email or call us and you'll hear back fast — usually same day.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">📈</div>
+        <div class="inc-name">Quarterly Agent Updates</div>
+        <div class="inc-desc">AI moves fast. We review and improve your agents every quarter, so you always benefit from the latest models and techniques.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">📋</div>
+        <div class="inc-name">Monthly Performance Report</div>
+        <div class="inc-desc">A plain-English summary every month — how many chats handled, leads captured, hours saved. No spreadsheets, just the headline numbers.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">🔒</div>
+        <div class="inc-name">Security & Compliance</div>
+        <div class="inc-desc">Your customer data is handled responsibly and compliantly. We keep up with AI regulations so you don't have to.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">🌐</div>
+        <div class="inc-name">Website Hosting (Full Package)</div>
+        <div class="inc-desc">On the Full Package, your website hosting is included — SSL, daily backups, speed optimisation, and minor content updates.</div>
+      </div>
+      <div class="inc-card fade-up">
+        <div class="inc-icon">🧠</div>
+        <div class="inc-name">Continuous Learning</div>
+        <div class="inc-desc">Your agents get smarter over time as they handle more of your customers. We fine-tune them based on real conversations.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- COMPARE -->
 <section class="compare-section">
-  <div class="inner">
-    <span class="eyebrow fade-up">The Difference</span>
-    <h2 class="section-title fade-up">Us vs everyone else.</h2>
-    <p class="section-sub fade-up">No other local agency offers what we do.</p>
-    <div class="compare-wrap fade-up">
-      <div class="cmp-row cmp-hdr">
-        <div class="cmp-cell" style="justify-content:flex-start">Capability</div>
-        <div class="cmp-cell">Other Agencies</div>
-        <div class="cmp-cell us">BrightMind Digital</div>
-      </div>
-      <div class="cmp-row"><div class="cmp-cell">Custom AI agents</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Agents trained on your business</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">24/7 customer handling</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Web design</div><div class="cmp-cell"><span class="yes">✓</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Zero jargon, plain English</div><div class="cmp-cell"><span class="maybe">Sometimes</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Monthly token allowance included</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Quarterly agent improvements</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-      <div class="cmp-row"><div class="cmp-cell">Local Hastings team</div><div class="cmp-cell"><span class="maybe">Some</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
-    </div>
-  </div>
+  <div class="inner">
+    <span class="eyebrow fade-up">The Difference</span>
+    <h2 class="section-title fade-up">Us vs everyone else.</h2>
+    <p class="section-sub fade-up">No other local agency offers what we do.</p>
+    <div class="compare-wrap fade-up">
+      <div class="cmp-row cmp-hdr">
+        <div class="cmp-cell" style="justify-content:flex-start">Capability</div>
+        <div class="cmp-cell">Other Agencies</div>
+        <div class="cmp-cell us">BrightMind Digital</div>
+      </div>
+      <div class="cmp-row"><div class="cmp-cell">Custom AI agents</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Agents trained on your business</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">24/7 customer handling</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Web design</div><div class="cmp-cell"><span class="yes">✓</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Zero jargon, plain English</div><div class="cmp-cell"><span class="maybe">Sometimes</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Monthly token allowance included</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Quarterly agent improvements</div><div class="cmp-cell"><span class="no">✗</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+      <div class="cmp-row"><div class="cmp-cell">Local Hastings team</div><div class="cmp-cell"><span class="maybe">Some</span></div><div class="cmp-cell us"><span class="yes">✓</span></div></div>
+    </div>
+  </div>
 </section>
 
+<!-- PROCESS -->
 <section class="process-section">
-  <div class="inner">
-    <span class="eyebrow fade-up">Getting Started</span>
-    <h2 class="section-title fade-up">Up and running in days,<br>not months.</h2>
-    <p class="section-sub fade-up">From free chat to live agents — the whole process is straightforward.</p>
-    <div class="process-steps fade-up">
-      <div class="ps"><div class="ps-num">01</div><h3>Free Chat</h3><p>30 minutes to understand your business. No pressure, just listening.</p></div>
-      <div class="ps"><div class="ps-num">02</div><h3>We Build</h3><p>We configure your agents and train them on your business. 5–7 working days.</p></div>
-      <div class="ps"><div class="ps-num">03</div><h3>Handover</h3><p>We walk you through everything in plain English. You're in control.</p></div>
-      <div class="ps"><div class="ps-num">04</div><h3>Go Live</h3><p>Your agents start working. We monitor, report, and improve every quarter.</p></div>
-    </div>
-  </div>
+  <div class="inner">
+    <span class="eyebrow fade-up">Getting Started</span>
+    <h2 class="section-title fade-up">Up and running in days,<br>not months.</h2>
+    <p class="section-sub fade-up">From free chat to live agents — the whole process is straightforward.</p>
+    <div class="process-steps fade-up">
+      <div class="ps"><div class="ps-num">01</div><h3>Free Chat</h3><p>30 minutes to understand your business. No pressure, just listening.</p></div>
+      <div class="ps"><div class="ps-num">02</div><h3>We Build</h3><p>We configure your agents and train them on your business. 5–7 working days.</p></div>
+      <div class="ps"><div class="ps-num">03</div><h3>Handover</h3><p>We walk you through everything in plain English. You're in control.</p></div>
+      <div class="ps"><div class="ps-num">04</div><h3>Go Live</h3><p>Your agents start working. We monitor, report, and improve every quarter.</p></div>
+    </div>
+  </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section class="testi-section">
-  <div class="inner">
-    <span class="eyebrow fade-up">Testimonials</span>
-    <h2 class="section-title fade-up">Businesses like yours.</h2>
-    <p class="section-sub fade-up">Real results from local businesses in Hastings and East Sussex.</p>
-    <div class="testi-grid">
-      <div class="testi-card fade-up">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"The enquiry agent was responding to customers at 11pm while I was asleep. Woke up to three new bookings I didn't have to do anything for. Genuinely couldn't believe it."</p>
-        <div class="testi-author"><div class="testi-av">🔧</div><div><div class="testi-name">Dave P.</div><div class="testi-role">Plumber, St Leonards-on-Sea</div></div></div>
-      </div>
-      <div class="testi-card fade-up">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"I used to spend Sunday evenings writing social posts for the week. Now the content agent does it in minutes. They explained everything without once making me feel out of my depth."</p>
-        <div class="testi-author"><div class="testi-av">🌸</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Florist, Hastings Old Town</div></div></div>
-      </div>
-      <div class="testi-card fade-up">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"We got the full package — website plus agents. The whole thing paid for itself inside two months from the extra bookings the agent captured. The monthly feels like nothing now."</p>
-        <div class="testi-author"><div class="testi-av">💆</div><div><div class="testi-name">Rachel T.</div><div class="testi-role">Beauty Salon, Bexhill</div></div></div>
-      </div>
-    </div>
-  </div>
+  <div class="inner">
+    <span class="eyebrow fade-up">Testimonials</span>
+    <h2 class="section-title fade-up">Businesses like yours.</h2>
+    <p class="section-sub fade-up">Real results from local businesses in Hastings and East Sussex.</p>
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The enquiry agent was responding to customers at 11pm while I was asleep. Woke up to three new bookings I didn't have to do anything for. Genuinely couldn't believe it."</p>
+        <div class="testi-author"><div class="testi-av">🔧</div><div><div class="testi-name">Dave P.</div><div class="testi-role">Plumber, St Leonards-on-Sea</div></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I used to spend Sunday evenings writing social posts for the week. Now the content agent does it in minutes. They explained everything without once making me feel out of my depth."</p>
+        <div class="testi-author"><div class="testi-av">🌸</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Florist, Hastings Old Town</div></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We got the full package — website plus agents. The whole thing paid for itself inside two months from the extra bookings the agent captured. The monthly feels like nothing now."</p>
+        <div class="testi-author"><div class="testi-av">💆</div><div><div class="testi-name">Rachel T.</div><div class="testi-role">Beauty Salon, Bexhill</div></div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- FAQ -->
 <section class="faq-section" id="faq">
-  <div class="inner">
-    <span class="eyebrow fade-up">FAQ</span>
-    <h2 class="section-title fade-up">Questions, answered.</h2>
-    <p class="section-sub fade-up">No waffle. Just plain answers.</p>
-    <div class="faq-wrap">
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What exactly is an AI agent? <span class="faq-icon">+</span></button><div class="faq-body"><p>An AI agent is a piece of software that can hold conversations, make decisions, and take actions on behalf of your business — automatically. Think of it as a very capable member of staff who works 24/7, never gets tired, and responds to customers in seconds. We build it, train it on your business, and manage it for you.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Do I need any technical knowledge? <span class="faq-icon">+</span></button><div class="faq-body"><p>None at all. We handle every technical aspect — building, hosting, training, and maintaining your agents. Your job is to tell us about your business. We do the rest. If you can use WhatsApp, you can work with us.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What are AI tokens and why do they cost money? <span class="faq-icon">+</span></button><div class="faq-body"><p>Tokens are essentially the "fuel" that AI models run on — each message your agent reads or writes uses a small amount. Your monthly plan includes a generous allowance, and we're transparent about usage. Think of it like a mobile data allowance: enough for normal usage, and we'll let you know if you're getting close to the limit.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Can the agent get things wrong? <span class="faq-icon">+</span></button><div class="faq-body"><p>We train your agent carefully and set strict guardrails to prevent it saying anything it shouldn't. It's also designed to hand conversations over to you when it's unsure. No agent is perfect, which is why we review and improve yours every quarter based on real conversations.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Do I have to have a website to get an AI agent? <span class="faq-icon">+</span></button><div class="faq-body"><p>No — agents can be deployed on WhatsApp, Facebook Messenger, Instagram, and other platforms too, not just websites. However, a website does make agents more effective. Our Full Package combines both for maximum impact.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Am I locked into a contract? <span class="faq-icon">+</span></button><div class="faq-body"><p>No long-term contracts. Monthly plans require 30 days notice to cancel. Annual plans give you a 20% discount and are paid upfront. If you cancel, your website and agents remain yours — we'll help you transition them elsewhere.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What makes you different from a national AI company? <span class="faq-icon">+</span></button><div class="faq-body"><p>We're local — based in Hastings, East Sussex. We can meet you face to face, we understand the local market, and you'll always speak to the same person. National companies offer tools; we offer a service. We become a partner in your business, not just a software subscription.</p></div></div>
-    </div>
-  </div>
+  <div class="inner">
+    <span class="eyebrow fade-up">FAQ</span>
+    <h2 class="section-title fade-up">Questions, answered.</h2>
+    <p class="section-sub fade-up">No waffle. Just plain answers.</p>
+    <div class="faq-wrap">
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What exactly is an AI agent? <span class="faq-icon">+</span></button><div class="faq-body"><p>An AI agent is a piece of software that can hold conversations, make decisions, and take actions on behalf of your business — automatically. Think of it as a very capable member of staff who works 24/7, never gets tired, and responds to customers in seconds. We build it, train it on your business, and manage it for you.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Do I need any technical knowledge? <span class="faq-icon">+</span></button><div class="faq-body"><p>None at all. We handle every technical aspect — building, hosting, training, and maintaining your agents. Your job is to tell us about your business. We do the rest. If you can use WhatsApp, you can work with us.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What are AI tokens and why do they cost money? <span class="faq-icon">+</span></button><div class="faq-body"><p>Tokens are essentially the "fuel" that AI models run on — each message your agent reads or writes uses a small amount. Your monthly plan includes a generous allowance, and we're transparent about usage. Think of it like a mobile data allowance: enough for normal usage, and we'll let you know if you're getting close to the limit.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Can the agent get things wrong? <span class="faq-icon">+</span></button><div class="faq-body"><p>We train your agent carefully and set strict guardrails to prevent it saying anything it shouldn't. It's also designed to hand conversations over to you when it's unsure. No agent is perfect, which is why we review and improve yours every quarter based on real conversations.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Do I have to have a website to get an AI agent? <span class="faq-icon">+</span></button><div class="faq-body"><p>No — agents can be deployed on WhatsApp, Facebook Messenger, Instagram, and other platforms too, not just websites. However, a website does make agents more effective. Our Full Package combines both for maximum impact.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">Am I locked into a contract? <span class="faq-icon">+</span></button><div class="faq-body"><p>No long-term contracts. Monthly plans require 30 days notice to cancel. Annual plans give you a 20% discount and are paid upfront. If you cancel, your website and agents remain yours — we'll help you transition them elsewhere.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)">What makes you different from a national AI company? <span class="faq-icon">+</span></button><div class="faq-body"><p>We're local — based in Hastings, East Sussex. We can meet you face to face, we understand the local market, and you'll always speak to the same person. National companies offer tools; we offer a service. We become a partner in your business, not just a software subscription.</p></div></div>
+    </div>
+  </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section" id="contact">
-  <div class="cta-glow"></div>
-  <div style="position:relative;z-index:1">
-    <span class="eyebrow" style="display:block;margin-bottom:1.5rem">Let's Talk</span>
-    <h2 class="section-title fade-up">Start working smarter<br>this week.</h2>
-    <p class="section-sub fade-up">Book a free 30-minute chat. We'll listen, be honest about what'll work for you, and put together a plan with no obligation.</p>
-    <div class="contact-row fade-up">
-      <a href="mailto:hello@brightminddigital.co.uk" class="contact-chip">📧 hello@brightminddigital.co.uk</a>
-      <a href="tel:+447943821750" class="contact-chip">📞 (+44) 07943821750</a>
-      <a href="#contact" class="btn btn-glow">Book Your Free Chat →</a>
-    </div>
-    <p style="margin-top:2rem;font-size:.8rem;color:var(--mid)">Based in Hastings, East Sussex · No jargon, ever · No hard sell</p>
-  </div>
+  <div class="cta-glow"></div>
+  <div style="position:relative;z-index:1">
+    <span class="eyebrow" style="display:block;margin-bottom:1.5rem">Let's Talk</span>
+    <h2 class="section-title fade-up">Start working smarter<br>this week.</h2>
+    <p class="section-sub fade-up">Book a free 30-minute chat. We'll listen, be honest about what'll work for you, and put together a plan with no obligation.</p>
+    <div class="contact-row fade-up">
+      <a href="/cdn-cgi/l/email-protection#6109040d0d0e210313080609150c080f050508060815000d4f020e4f140a" class="contact-chip">📧 <span class="__cf_email__" data-cfemail="f69e939a9a99b694849f919e829b9f9892929f919f82979ad89599d8839d">[email&#160;protected]</span></a>
+      <a href="tel:01424000000" class="contact-chip">📞 01424 000 000</a>
+      <a href="#" class="btn btn-glow">Book Your Free Chat →</a>
+    </div>
+    <p style="margin-top:2rem;font-size:.8rem;color:var(--mid)">Based in Hastings, East Sussex · No jargon, ever · No hard sell</p>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div>
-      <a href="#" class="footer-brand">Bright<span>Mind</span> Digital</a>
-      <p class="footer-desc">AI agents and web design for small and medium businesses in Hastings and East Sussex. Plain English. Real results.</p>
-    </div>
-    <div class="footer-col"><h5>AI Agents</h5><ul><li><a href="#agents">Customer Agent</a></li><li><a href="#agents">Content Agent</a></li><li><a href="#agents">Review Agent</a></li><li><a href="#agents">Follow-Up Agent</a></li><li><a href="#agents">Insight Agent</a></li></ul></div>
-    <div class="footer-col"><h5>Services</h5><ul><li><a href="#pricing">Pricing & Plans</a></li><li><a href="#agents">Website Add-on</a></li><li><a href="#how">How It Works</a></li><li><a href="#contact">About Us</a></li></ul></div>
-    <div class="footer-col"><h5>Get Help</h5><ul><li><a href="#faq">FAQ</a></li><li><a href="#contact">Book Free Chat</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 BrightMind Digital. All rights reserved.</span>
-    <span>📍 Hastings, East Sussex</span>
-  </div>
+  <div class="footer-top">
+    <div>
+      <a href="#" class="footer-brand">Bright<span>Mind</span> Digital</a>
+      <p class="footer-desc">AI agents and web design for small and medium businesses in Hastings and East Sussex. Plain English. Real results.</p>
+    </div>
+    <div class="footer-col"><h5>AI Agents</h5><ul><li><a href="#">Customer Agent</a></li><li><a href="#">Content Agent</a></li><li><a href="#">Review Agent</a></li><li><a href="#">Follow-Up Agent</a></li><li><a href="#">Insight Agent</a></li></ul></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="#">Pricing & Plans</a></li><li><a href="#">Website Add-on</a></li><li><a href="#">How It Works</a></li><li><a href="#">About Us</a></li></ul></div>
+    <div class="footer-col"><h5>Get Help</h5><ul><li><a href="#">FAQ</a></li><li><a href="#">Book Free Chat</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 BrightMind Digital. All rights reserved.</span>
+    <span>📍 Hastings, East Sussex</span>
+  </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* FAQ */
 function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const open = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!open) item.classList.add('open');
+  const item = btn.parentElement;
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!open) item.classList.add('open');
 }
 
 /* Scroll reveal */
 const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
 }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.fade-up').forEach((el) => {
-  const sibs = Array.from(el.parentElement.querySelectorAll('.fade-up'));
-  el.style.transitionDelay = Math.min(sibs.indexOf(el) * 0.07, 0.42) + 's';
-  obs.observe(el);
+  const sibs = Array.from(el.parentElement.querySelectorAll('.fade-up'));
+  el.style.transitionDelay = Math.min(sibs.indexOf(el) * 0.07, 0.42) + 's';
+  obs.observe(el);
 });
 
 /* Bento glow */
 document.querySelectorAll('.agent-card,.plan-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
-    card.style.setProperty('--my', ((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
-  });
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+    card.style.setProperty('--my', ((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+  });
 });
 
 /* How-it-works step interaction */
 const howSteps = document.querySelectorAll('.how-step');
 const howDemos = document.querySelectorAll('.how-demo');
 function activateHow(i) {
-  howSteps.forEach((s,j) => s.classList.toggle('active', i===j));
-  howDemos.forEach((d,j) => d.classList.toggle('active', i===j));
+  howSteps.forEach((s,j) => s.classList.toggle('active', i===j));
+  howDemos.forEach((d,j) => d.classList.toggle('active', i===j));
 }
 howSteps.forEach((s,i) => s.addEventListener('click', () => { clearInterval(howTimer); activateHow(i); }));
 let howIdx = 0;
@@ -1096,169 +1136,22 @@ const howTimer = setInterval(() => { howIdx = (howIdx+1) % howSteps.length; acti
 /* Billing toggle */
 let isAnnual = false;
 function toggleBilling() {
-  isAnnual = !isAnnual;
-  const track = document.getElementById('toggle-btn');
-  track.classList.toggle('on', isAnnual);
-  document.getElementById('monthly-lbl').classList.toggle('active', !isAnnual);
-  document.getElementById('annual-lbl').classList.toggle('active', isAnnual);
-  document.querySelectorAll('.price-val').forEach(el => {
-    const val = isAnnual ? el.dataset.annual : el.dataset.monthly;
-    el.textContent = '£' + val;
-  });
+  isAnnual = !isAnnual;
+  const track = document.getElementById('toggle-btn');
+  track.classList.toggle('on', isAnnual);
+  document.getElementById('monthly-lbl').classList.toggle('active', !isAnnual);
+  document.getElementById('annual-lbl').classList.toggle('active', isAnnual);
+  document.querySelectorAll('.price-val').forEach(el => {
+    const val = isAnnual ? el.dataset.annual : el.dataset.monthly;
+    el.textContent = '£' + val;
+  });
 }
 
 /* Nav scroll — light theme */
 window.addEventListener('scroll', () => {
-  document.getElementById('main-nav').style.background =
-    window.scrollY > 40 ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.85)';
+  document.getElementById('main-nav').style.background =
+    window.scrollY > 40 ? 'rgba(255,255,255,0.97)' : 'rgba(255,255,255,0.85)';
 }, { passive: true });
-
-/* API LOGIC */
-          const bizQuestions = {
-            "Plumber or Tradesperson": {
-              q: "What's the biggest time-drain in your week?",
-              options: ["Answering the same questions over and over", "Chasing customers for payment or approval", "Writing up quotes and following up", "Missed calls when I'm on a job"]
-            },
-            "Restaurant or Café": {
-              q: "What would make the biggest difference to your business?",
-              options: ["Filling more tables / taking more bookings", "Saving time on social media and marketing", "Handling customer queries and reservations automatically", "Getting more reviews and responding to them"]
-            },
-            "Hair Salon or Beauty Business": {
-              q: "Where do you lose the most time or money?",
-              options: ["No-shows and last-minute cancellations", "Manual booking and reminder messages", "Writing content for Instagram and Facebook", "Responding to enquiries outside opening hours"]
-            },
-            "Accountant or Solicitor": {
-              q: "What takes up more of your time than it should?",
-              options: ["Answering routine client queries", "Chasing documents and information from clients", "Writing reports, letters, or emails", "Following up on leads and proposals"]
-            },
-            "Retail Shop": {
-              q: "What's your biggest challenge right now?",
-              options: ["Getting more customers through the door / online", "Managing customer questions and orders", "Creating content and promotions", "Following up with customers after a purchase"]
-            },
-            "Fitness or Health Coach": {
-              q: "What would help your business most?",
-              options: ["Booking and managing client sessions automatically", "Nurturing leads who don't book straight away", "Creating workout plans, content, or emails faster", "Staying on top of client check-ins and follow-ups"]
-            },
-            "Estate Agent or Letting Agent": {
-              q: "Where does your team spend too much time?",
-              options: ["Answering basic property enquiries", "Chasing landlords, tenants, or buyers for information", "Writing property descriptions and listings", "Following up with leads who've gone quiet"]
-            },
-            "Childcare or Nursery": {
-              q: "What would make your life easier?",
-              options: ["Handling parent enquiries and waiting list queries", "Sending updates, reminders, and newsletters to parents", "Admin and paperwork taking too long", "Getting more local families to find and trust us"]
-            },
-            "Other small or medium business": {
-              q: "What's the biggest challenge in your business right now?",
-              options: ["Responding to enquiries quickly enough", "Too much repetitive admin eating into my day", "Getting new customers and following up on leads", "Creating content and marketing materials"]
-            }
-          };
-
-          let selectedBiz = '';
-          let selectedAnswer = '';
-
-          function selectBiz(btn) {
-            selectedBiz = btn.dataset.biz;
-            document.getElementById('demo-step-1').style.display = 'none';
-            const step2 = document.getElementById('demo-step-2');
-            step2.style.display = 'block';
-            const data = bizQuestions[selectedBiz];
-            document.getElementById('demo-question').textContent = data.q;
-            const optWrap = document.getElementById('demo-options');
-            optWrap.innerHTML = '';
-            data.options.forEach(opt => {
-              const b = document.createElement('button');
-              b.className = 'answer-btn';
-              b.textContent = opt;
-              b.onclick = () => selectAnswer(opt);
-              optWrap.appendChild(b);
-            });
-          }
-
-          function selectAnswer(answer) {
-            selectedAnswer = answer;
-            document.getElementById('demo-step-2').style.display = 'none';
-            document.getElementById('demo-step-3').style.display = 'block';
-            document.getElementById('demo-typing').style.display = 'flex';
-            document.getElementById('demo-response-text').style.display = 'none';
-            document.getElementById('demo-ctas').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
-            callAI();
-          }
-
-          async function callAI() {
-            try {
-              const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  businessType: selectedBiz,
-                  challenge: selectedAnswer
-                })
-              });
-
-              if (!response.ok) throw new Error('Proxy error');
-              const parsed = await response.json();
-
-              const text = parsed.message || "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
-              const statNum = parsed.statNum || '4 hrs';
-              const statLabel = parsed.statLabel || 'saved per week';
-              const statSub = parsed.statSub || 'on average for similar businesses';
-
-              document.getElementById('demo-typing').style.display = 'none';
-              const responseEl = document.getElementById('demo-response-text');
-              responseEl.style.display = 'block';
-
-              // Typewriter effect
-              let i = 0;
-              responseEl.textContent = '';
-              function typeChar() {
-                if (i < text.length) {
-                  responseEl.textContent += text[i];
-                  i++;
-                  setTimeout(typeChar, 18);
-                } else {
-                  // Pop in the stat
-                  const statEl = document.getElementById('demo-stat');
-                  document.getElementById('demo-stat-num').textContent = statNum;
-                  document.getElementById('demo-stat-label').textContent = statLabel;
-                  document.getElementById('demo-stat-sub').textContent = statSub;
-                  statEl.style.opacity = '0';
-                  statEl.style.transform = 'translateY(8px)';
-                  statEl.style.transition = 'opacity .45s ease, transform .45s ease';
-                  statEl.style.display = 'flex';
-                  requestAnimationFrame(() => requestAnimationFrame(() => {
-                    statEl.style.opacity = '1';
-                    statEl.style.transform = 'translateY(0)';
-                  }));
-                  document.getElementById('demo-ctas').style.display = 'flex';
-                }
-              }
-              typeChar();
-
-            } catch(e) {
-              document.getElementById('demo-typing').style.display = 'none';
-              const responseEl = document.getElementById('demo-response-text');
-              responseEl.style.display = 'block';
-              responseEl.textContent = "Yeah, that's a really common one!\n\nAn AI agent can handle this automatically — trained on your business, running 24/7.\n\nMost clients free up hours every week within the first month.";
-              const statEl = document.getElementById('demo-stat');
-              document.getElementById('demo-stat-num').textContent = '4 hrs';
-              document.getElementById('demo-stat-label').textContent = 'saved per week';
-              document.getElementById('demo-stat-sub').textContent = 'on average for similar businesses';
-              statEl.style.display = 'flex';
-              document.getElementById('demo-ctas').style.display = 'flex';
-            }
-          }
-
-          function goBack() {
-            document.getElementById('demo-step-2').style.display = 'none';
-            document.getElementById('demo-step-1').style.display = 'block';
-          }
-
-          function resetDemo() {
-            document.getElementById('demo-step-3').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
-            document.getElementById('demo-step-1').style.display = 'block';
-          }
 </script>
 </body>
 </html>
