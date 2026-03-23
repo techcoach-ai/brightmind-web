@@ -1,0 +1,105 @@
+/* --- NEW SECURE AI LOGIC --- */
+let selectedBiz = '';
+let selectedAnswer = '';
+
+function selectBiz(btn) {
+    selectedBiz = btn.dataset.biz;
+    document.getElementById('demo-step-1').style.display = 'none';
+    const step2 = document.getElementById('demo-step-2');
+    step2.style.display = 'block';
+    const data = bizQuestions[selectedBiz];
+    document.getElementById('demo-question').textContent = data.q;
+    const optWrap = document.getElementById('demo-options');
+    optWrap.innerHTML = '';
+    data.options.forEach(opt => {
+        const b = document.createElement('button');
+        b.className = 'answer-btn';
+        b.textContent = opt;
+        b.onclick = () => selectAnswer(opt);
+        optWrap.appendChild(b);
+    });
+}
+
+function selectAnswer(answer) {
+    selectedAnswer = answer;
+    document.getElementById('demo-step-2').style.display = 'none';
+    document.getElementById('demo-step-3').style.display = 'block';
+    document.getElementById('demo-typing').style.display = 'flex';
+    document.getElementById('demo-response-text').style.display = 'none';
+    document.getElementById('demo-ctas').style.display = 'none';
+    document.getElementById('demo-stat').style.display = 'none';
+    callSecureAI();
+}
+
+async function callSecureAI() {
+    try {
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                businessType: selectedBiz,
+                challenge: selectedAnswer
+            })
+        });
+
+        if (!response.ok) throw new Error('Proxy error');
+        
+        const parsed = await response.json();
+        
+        // Use returned data or fallbacks
+        const text = parsed.message || "Yeah, that's a common challenge in Hastings!\n\nAn AI agent can automate this 24/7.\n\nYou'll see a massive difference in your weekly admin time.";
+        const statNum = parsed.statNum || '4 hrs';
+        const statLabel = parsed.statLabel || 'saved per week';
+        const statSub = parsed.statSub || 'on average for local trades';
+
+        renderResponse(text, statNum, statLabel, statSub);
+
+    } catch(e) {
+        console.error("AI Demo Error:", e);
+        // Fallback so the site never looks broken
+        renderResponse(
+            "Honestly, we hear that a lot!\n\nA custom Enquiry Agent would solve this perfectly.\n\nYou'd save hours of back-and-forth every single week.",
+            "5 hrs", "recovered weekly", "average for East Sussex SMEs"
+        );
+    }
+}
+
+function renderResponse(text, num, label, sub) {
+    document.getElementById('demo-typing').style.display = 'none';
+    const responseEl = document.getElementById('demo-response-text');
+    responseEl.style.display = 'block';
+    
+    // Typewriter Effect
+    let i = 0;
+    responseEl.textContent = '';
+    function type() {
+        if (i < text.length) {
+            responseEl.textContent += text[i];
+            i++;
+            setTimeout(type, 20);
+        } else {
+            showStats(num, label, sub);
+        }
+    }
+    type();
+}
+
+function showStats(num, label, sub) {
+    const statEl = document.getElementById('demo-stat');
+    document.getElementById('demo-stat-num').textContent = num;
+    document.getElementById('demo-stat-label').textContent = label;
+    document.getElementById('demo-stat-sub').textContent = sub;
+    statEl.style.display = 'flex';
+    document.getElementById('demo-ctas').style.display = 'flex';
+}
+
+function resetDemo() {
+    document.getElementById('demo-step-3').style.display = 'none';
+    document.getElementById('demo-stat').style.display = 'none';
+    document.getElementById('demo-step-1').style.display = 'block';
+}
+
+function goBack() {
+    document.getElementById('demo-step-2').style.display = 'none';
+    document.getElementById('demo-step-1').style.display = 'block';
+}
