@@ -1,155 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightMind Digital | AI Agents | Hastings</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- CORE STYLES --- */
-        :root {
-            --white: #ffffff; --off-white: #1a1a2e; --mid: #6b7280;
-            --black: #111827; --bg: #ffffff; --accent: #5b5cf6;
-            --accent-glow: rgba(91,92,246,0.25); --teal: #0ea5a0;
-            --card-bg: #ffffff; --card-border: #e5e7ef; --text: #111827;
-        }
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-        
-        /* --- NAV --- */
-        nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.8);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,0.05)}
-        .nav-logo{font-weight:700;text-decoration:none;color:var(--text);font-size:1.2rem}
-        .nav-logo span{color:var(--accent)}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightMind Digital | AI Agents & Web Design | Hastings, East Sussex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* --- YOUR ORIGINAL PREMIUM STYLING --- */
+:root {
+  --white: #ffffff; --off-white: #1a1a2e; --mid: #6b7280; --black: #111827;
+  --bg: #ffffff; --bg-alt: #f8f9fc; --bg-alt2: #f1f3f9; --accent: #5b5cf6;
+  --accent-glow: rgba(91,92,246,0.25); --teal: #0ea5a0; --teal-glow: rgba(14,165,160,0.25);
+  --card-bg: #ffffff; --card-border: #e5e7ef; --text: #111827; --text-soft: #374151;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
 
-        /* --- HERO --- */
-        .hero{padding:120px 5% 60px;text-align:center;min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
-        .hero-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:20px}
-        .hero-title span{display:block;background:linear-gradient(90deg,var(--accent),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-        .hero-sub{max-width:600px;color:var(--mid);margin-bottom:30px;font-size:1.1rem}
+/* NAVIGATION */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.85);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.07)}
+.nav-logo{font-size:1.05rem;font-weight:700;color:var(--text);text-decoration:none}.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:.8rem;color:var(--mid);text-decoration:none}
+.nav-cta{background:var(--accent);color:#fff!important;padding:.4rem 1.1rem;border-radius:20px;font-size:.78rem;font-weight:500}
 
-        /* --- DEMO WIDGET --- */
-        .agent-card{max-width:800px;margin:2rem auto;padding:2.5rem;border:1.5px solid var(--card-border);border-radius:24px;background:white;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
-        .biz-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));gap:10px;margin-top:20px}
-        .biz-btn, .answer-btn{padding:12px;border:1px solid var(--card-border);background:#f8f9fc;border-radius:12px;cursor:pointer;font-family:inherit;transition:0.2s}
-        .biz-btn:hover, .answer-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(91,92,246,0.05)}
-        
-        #demo-response-wrap{background:#f1f3f9;padding:20px;border-radius:15px;margin-top:20px;min-height:100px;font-size:0.95rem;white-space:pre-line}
-        .typing span{width:8px;height:8px;background:var(--accent);display:inline-block;border-radius:50%;margin-right:4px;animation:bounce 1.2s infinite}
-        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-        
-        .btn{padding:12px 24px;background:var(--accent);color:white;text-decoration:none;border-radius:50px;font-weight:600;display:inline-block;margin-top:20px}
-    </style>
+/* HERO SECTION */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 5% 5rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 90% 70% at 50% -10%,rgba(91,92,246,.09) 0%,transparent 60%),#fff}
+.hero-inner{position:relative;z-index:2;max-width:960px}
+.hero-title{font-size:clamp(3.2rem,8.5vw,7rem);font-weight:700;letter-spacing:-.045em;line-height:1;margin-bottom:1.75rem}
+.hero-title .line2{background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--mid);max-width:640px;margin:0 auto 2.75rem}
+
+/* AGENT CARDS & DEMO */
+.agent-showcase{background:var(--bg-alt);padding:8rem 5%}
+.agents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:4rem}
+.agent-card{background:var(--card-bg);border:1.5px solid var(--card-border);border-radius:20px;padding:2rem;position:relative;transition:0.3s}
+.agent-wide{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.agent-wide-demo{background:var(--bg-alt2);border:1.5px solid var(--card-border);border-radius:16px;padding:1.5rem}
+
+.biz-btn { background:#f8f9fc; border:1.5px solid var(--card-border); border-radius:10px; padding:.6rem .5rem; font-size:.75rem; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:.3rem; transition:0.2s; font-family:inherit; }
+.biz-btn:hover { border-color:var(--accent); background:rgba(91,92,246,.05); }
+.answer-btn { background:#f8f9fc; border:1.5px solid var(--card-border); border-radius:10px; padding:.65rem 1rem; font-size:.84rem; cursor:pointer; transition:0.2s; width:100%; margin-bottom:8px; text-align:left; }
+.answer-btn:hover { border-color:var(--accent); background:rgba(91,92,246,.05); }
+
+#demo-response-text { font-size:.9rem; line-height:1.85; white-space:pre-line; margin-bottom:1rem; }
+.typing span{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;animation:type 1.2s infinite ease-in-out}
+@keyframes type{0%,100%{opacity:.4;transform:translateY(0)}50%{opacity:1;transform:translateY(-5px)}}
+
+/* PRICING */
+.pricing-section{background:var(--bg-alt);padding:8rem 5%;text-align:center}
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.plan-card{background:white;border:1.5px solid var(--card-border);border-radius:22px;padding:2.25rem;transition:0.3s}
+.btn-glow{background:var(--accent);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;display:inline-block;font-weight:600}
+
+@media(max-width:1100px){.agents-grid,.plans-grid{grid-template-columns:1fr}.agent-wide{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="nav-logo">Bright<span>Mind</span> Digital</a>
-    </nav>
+<nav id="main-nav">
+  <a href="#" class="nav-logo">Bright<span>Mind</span> Digital</a>
+  <ul class="nav-links">
+    <li><a href="#agents">AI Agents</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="nav-cta">Book Free Chat</a></li>
+  </ul>
+</nav>
 
-    <section class="hero">
-        <h1 class="hero-title">Your business, <span>powered by AI.</span></h1>
-        <p class="hero-sub">Custom AI agents built for Hastings business owners. Automate your admin and capture every lead.</p>
-        
-        <div class="agent-card">
-            <div id="demo-step-1">
-                <p><strong>Step 1: What is your business?</strong></p>
-                <div class="biz-grid">
-                    <button class="biz-btn" data-biz="Plumber" onclick="selectBiz(this)">🔧 Trades</button>
-                    <button class="biz-btn" data-biz="Restaurant" onclick="selectBiz(this)">☕ Café/Resto</button>
-                    <button class="biz-btn" data-biz="Salon" onclick="selectBiz(this)">💅 Beauty</button>
-                    <button class="biz-btn" data-biz="Other" onclick="selectBiz(this)">🏢 Other</button>
-                </div>
-            </div>
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Your business,<br><span class="line2">powered by AI.</span></h1>
+    <p class="hero-sub">We build custom AI agents for Hastings businesses that work around the clock. No tech knowledge needed.</p>
+    <a href="#pricing" class="btn-glow">See Plans & Pricing →</a>
+  </div>
+</section>
 
-            <div id="demo-step-2" style="display:none">
-                <p id="demo-question"></p>
-                <div id="demo-options" style="display:flex;flex-direction:column;gap:10px;margin-top:15px"></div>
-            </div>
-
-            <div id="demo-step-3" style="display:none">
-                <p><strong>AI Suggestion:</strong></p>
-                <div id="demo-response-wrap">
-                    <div id="demo-typing" class="typing"><span></span><span></span><span></span></div>
-                    <div id="demo-response-text"></div>
-                </div>
-                <div id="demo-ctas" style="display:none">
-                    <a href="#" class="btn">Get Started</a>
-                    <button onclick="resetDemo()" style="background:none;border:none;text-decoration:underline;margin-left:15px;cursor:pointer">Try again</button>
-                </div>
-            </div>
+<section class="agent-showcase" id="agents">
+  <div class="agent-card agent-wide">
+    <div>
+      <h2 style="font-size:2rem;margin-bottom:1rem">Meet Your 24/7 Agent</h2>
+      <p style="color:var(--mid);margin-bottom:1.5rem">Pick your business type to see a live demo of how AI handles your biggest challenges.</p>
+    </div>
+    <div class="agent-wide-demo">
+      <div id="demo-step-1">
+        <p style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:1rem">✦ SELECT YOUR BUSINESS</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+          <button class="biz-btn" data-biz="Plumber" onclick="selectBiz(this)">🔧 Trades</button>
+          <button class="biz-btn" data-biz="Restaurant" onclick="selectBiz(this)">☕ Restaurant</button>
+          <button class="biz-btn" data-biz="Salon" onclick="selectBiz(this)">💅 Beauty</button>
+          <button class="biz-btn" data-biz="Retail" onclick="selectBiz(this)">🛍️ Retail</button>
         </div>
-    </section>
+      </div>
+      <div id="demo-step-2" style="display:none">
+        <p id="demo-question" style="font-weight:600;margin-bottom:1rem"></p>
+        <div id="demo-options"></div>
+      </div>
+      <div id="demo-step-3" style="display:none">
+        <p style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:1rem">✦ AI SUGGESTION</p>
+        <div id="demo-typing" class="typing"><span></span><span></span><span></span></div>
+        <div id="demo-response-text"></div>
+        <button onclick="resetDemo()" style="font-size:.8rem;color:var(--mid);background:none;border:none;text-decoration:underline;cursor:pointer">Try another</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        const bizQuestions = {
-            "Plumber": { q: "Biggest time drain?", options: ["Chasing quotes", "Missed calls", "Repeated FAQs"] },
-            "Restaurant": { q: "Main goal?", options: ["More bookings", "Handling reviews", "Automating menus"] },
-            "Salon": { q: "Worst issue?", options: ["No-shows", "Late night enquiries", "Social media content"] },
-            "Other": { q: "Challenge?", options: ["Customer support", "Lead follow-up", "Admin tasks"] }
-        };
+<script>
+const bizQuestions = {
+  "Plumber": { q: "What's the biggest time-drain?", options: ["Missed calls on site", "Chasing quotes", "Repeated FAQs"] },
+  "Restaurant": { q: "What helps most?", options: ["Filling tables", "Managing reviews", "Booking enquiries"] },
+  "Salon": { q: "Biggest headache?", options: ["No-shows", "Late night messages", "Social media content"] },
+  "Retail": { q: "Primary goal?", options: ["Lead follow-up", "Product FAQs", "Promoting sales"] }
+};
 
-        let selectedBiz = '';
+let selectedBiz = '';
 
-        function selectBiz(btn) {
-            selectedBiz = btn.dataset.biz;
-            document.getElementById('demo-step-1').style.display = 'none';
-            document.getElementById('demo-step-2').style.display = 'block';
-            document.getElementById('demo-question').innerText = bizQuestions[selectedBiz].q;
-            
-            const optWrap = document.getElementById('demo-options');
-            optWrap.innerHTML = '';
-            bizQuestions[selectedBiz].options.forEach(opt => {
-                const b = document.createElement('button');
-                b.className = 'answer-btn';
-                b.innerText = opt;
-                b.onclick = () => selectAnswer();
-                optWrap.appendChild(b);
-            });
-        }
+function selectBiz(btn) {
+  selectedBiz = btn.dataset.biz;
+  document.getElementById('demo-step-1').style.display = 'none';
+  document.getElementById('demo-step-2').style.display = 'block';
+  document.getElementById('demo-question').innerText = bizQuestions[selectedBiz].q;
+  const optWrap = document.getElementById('demo-options');
+  optWrap.innerHTML = '';
+  bizQuestions[selectedBiz].options.forEach(opt => {
+    const b = document.createElement('button');
+    b.className = 'answer-btn';
+    b.innerText = opt;
+    b.onclick = () => selectAnswer(opt);
+    optWrap.appendChild(b);
+  });
+}
 
-        function selectAnswer() {
-            document.getElementById('demo-step-2').style.display = 'none';
-            document.getElementById('demo-step-3').style.display = 'block';
-            callSecureAI();
-        }
+function selectAnswer(ans) {
+  document.getElementById('demo-step-2').style.display = 'none';
+  document.getElementById('demo-step-3').style.display = 'block';
+  document.getElementById('demo-typing').style.display = 'inline-block';
+  document.getElementById('demo-response-text').innerText = '';
+  callAI(ans);
+}
 
-        async function callSecureAI() {
-            try {
-                const res = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ businessType: selectedBiz })
-                });
-                const data = await res.json();
-                typeWriter(data.message || "AI Agent ready to help!");
-            } catch (e) {
-                typeWriter("Yeah, that's common in Hastings! An AI agent can fix that by running 24/7 in your voice.");
-            }
-        }
+async function callAI(answer) {
+  try {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ businessType: selectedBiz, challenge: answer })
+    });
+    const data = await response.json();
+    typeText(data.message);
+  } catch(e) {
+    typeText("That's a common one in Hastings! A custom AI agent can handle those enquiries 24/7 so you don't have to.");
+  }
+}
 
-        function typeWriter(text) {
-            document.getElementById('demo-typing').style.display = 'none';
-            const el = document.getElementById('demo-response-text');
-            el.innerText = '';
-            let i = 0;
-            function type() {
-                if (i < text.length) {
-                    el.innerText += text.charAt(i);
-                    i++;
-                    setTimeout(type, 25);
-                } else {
-                    document.getElementById('demo-ctas').style.display = 'block';
-                }
-            }
-            type();
-        }
+function typeText(text) {
+  document.getElementById('demo-typing').style.display = 'none';
+  const el = document.getElementById('demo-response-text');
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.innerText += text.charAt(i);
+      i++;
+      setTimeout(type, 20);
+    }
+  }
+  type();
+}
 
-        function resetDemo() {
-            document.getElementById('demo-step-3').style.display = 'none';
-            document.getElementById('demo-step-1').style.display = 'block';
-        }
-    </script>
+function resetDemo() {
+  document.getElementById('demo-step-3').style.display = 'none';
+  document.getElementById('demo-step-1').style.display = 'block';
+}
+</script>
 </body>
 </html>
