@@ -4,100 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightMind Digital | AI Agents | Hastings</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CORE STYLES --- */
+        :root {
+            --white: #ffffff; --off-white: #1a1a2e; --mid: #6b7280;
+            --black: #111827; --bg: #ffffff; --accent: #5b5cf6;
+            --accent-glow: rgba(91,92,246,0.25); --teal: #0ea5a0;
+            --card-bg: #ffffff; --card-border: #e5e7ef; --text: #111827;
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        
+        /* --- NAV --- */
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.8);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,0.05)}
+        .nav-logo{font-weight:700;text-decoration:none;color:var(--text);font-size:1.2rem}
+        .nav-logo span{color:var(--accent)}
+
+        /* --- HERO --- */
+        .hero{padding:120px 5% 60px;text-align:center;min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+        .hero-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:20px}
+        .hero-title span{display:block;background:linear-gradient(90deg,var(--accent),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .hero-sub{max-width:600px;color:var(--mid);margin-bottom:30px;font-size:1.1rem}
+
+        /* --- DEMO WIDGET --- */
+        .agent-card{max-width:800px;margin:2rem auto;padding:2.5rem;border:1.5px solid var(--card-border);border-radius:24px;background:white;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
+        .biz-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));gap:10px;margin-top:20px}
+        .biz-btn, .answer-btn{padding:12px;border:1px solid var(--card-border);background:#f8f9fc;border-radius:12px;cursor:pointer;font-family:inherit;transition:0.2s}
+        .biz-btn:hover, .answer-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(91,92,246,0.05)}
+        
+        #demo-response-wrap{background:#f1f3f9;padding:20px;border-radius:15px;margin-top:20px;min-height:100px;font-size:0.95rem;white-space:pre-line}
+        .typing span{width:8px;height:8px;background:var(--accent);display:inline-block;border-radius:50%;margin-right:4px;animation:bounce 1.2s infinite}
+        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+        
+        .btn{padding:12px 24px;background:var(--accent);color:white;text-decoration:none;border-radius:50px;font-weight:600;display:inline-block;margin-top:20px}
+    </style>
+</head>
 <body>
 
+    <nav>
+        <a href="#" class="nav-logo">Bright<span>Mind</span> Digital</a>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">Your business, <span>powered by AI.</span></h1>
+        <p class="hero-sub">Custom AI agents built for Hastings business owners. Automate your admin and capture every lead.</p>
+        
+        <div class="agent-card">
+            <div id="demo-step-1">
+                <p><strong>Step 1: What is your business?</strong></p>
+                <div class="biz-grid">
+                    <button class="biz-btn" data-biz="Plumber" onclick="selectBiz(this)">🔧 Trades</button>
+                    <button class="biz-btn" data-biz="Restaurant" onclick="selectBiz(this)">☕ Café/Resto</button>
+                    <button class="biz-btn" data-biz="Salon" onclick="selectBiz(this)">💅 Beauty</button>
+                    <button class="biz-btn" data-biz="Other" onclick="selectBiz(this)">🏢 Other</button>
+                </div>
+            </div>
+
+            <div id="demo-step-2" style="display:none">
+                <p id="demo-question"></p>
+                <div id="demo-options" style="display:flex;flex-direction:column;gap:10px;margin-top:15px"></div>
+            </div>
+
+            <div id="demo-step-3" style="display:none">
+                <p><strong>AI Suggestion:</strong></p>
+                <div id="demo-response-wrap">
+                    <div id="demo-typing" class="typing"><span></span><span></span><span></span></div>
+                    <div id="demo-response-text"></div>
+                </div>
+                <div id="demo-ctas" style="display:none">
+                    <a href="#" class="btn">Get Started</a>
+                    <button onclick="resetDemo()" style="background:none;border:none;text-decoration:underline;margin-left:15px;cursor:pointer">Try again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Your Biz Questions Data (Keep this so the buttons work)
         const bizQuestions = {
-            "Plumber or Tradesperson": {
-                q: "What's the biggest time-drain in your week?",
-                options: ["Answering same questions", "Chasing payments", "Writing quotes", "Missed calls"]
-            },
-            // ... Add your other business types back here ...
+            "Plumber": { q: "Biggest time drain?", options: ["Chasing quotes", "Missed calls", "Repeated FAQs"] },
+            "Restaurant": { q: "Main goal?", options: ["More bookings", "Handling reviews", "Automating menus"] },
+            "Salon": { q: "Worst issue?", options: ["No-shows", "Late night enquiries", "Social media content"] },
+            "Other": { q: "Challenge?", options: ["Customer support", "Lead follow-up", "Admin tasks"] }
         };
 
-        /* --- THE SECURE SCRIPT YOU JUST GAVE ME --- */
         let selectedBiz = '';
-        let selectedAnswer = '';
 
         function selectBiz(btn) {
             selectedBiz = btn.dataset.biz;
             document.getElementById('demo-step-1').style.display = 'none';
-            const step2 = document.getElementById('demo-step-2');
-            step2.style.display = 'block';
-            const data = bizQuestions[selectedBiz];
-            document.getElementById('demo-question').textContent = data.q;
+            document.getElementById('demo-step-2').style.display = 'block';
+            document.getElementById('demo-question').innerText = bizQuestions[selectedBiz].q;
+            
             const optWrap = document.getElementById('demo-options');
             optWrap.innerHTML = '';
-            data.options.forEach(opt => {
+            bizQuestions[selectedBiz].options.forEach(opt => {
                 const b = document.createElement('button');
                 b.className = 'answer-btn';
-                b.textContent = opt;
-                b.onclick = () => selectAnswer(opt);
+                b.innerText = opt;
+                b.onclick = () => selectAnswer();
                 optWrap.appendChild(b);
             });
         }
 
-        function selectAnswer(answer) {
-            selectedAnswer = answer;
+        function selectAnswer() {
             document.getElementById('demo-step-2').style.display = 'none';
             document.getElementById('demo-step-3').style.display = 'block';
-            document.getElementById('demo-typing').style.display = 'flex';
-            document.getElementById('demo-response-text').style.display = 'none';
-            document.getElementById('demo-ctas').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
             callSecureAI();
         }
 
         async function callSecureAI() {
             try {
-                const response = await fetch('/api/chat', {
+                const res = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ businessType: selectedBiz, challenge: selectedAnswer })
+                    body: JSON.stringify({ businessType: selectedBiz })
                 });
-                if (!response.ok) throw new Error('Proxy error');
-                const parsed = await response.json();
-                renderResponse(parsed.message, parsed.statNum, parsed.statLabel, parsed.statSub);
-            } catch(e) {
-                renderResponse(
-                    "Honestly, we hear that a lot!\n\nA custom AI agent would solve this perfectly.",
-                    "5 hrs", "recovered weekly", "average for local SMEs"
-                );
+                const data = await res.json();
+                typeWriter(data.message || "AI Agent ready to help!");
+            } catch (e) {
+                typeWriter("Yeah, that's common in Hastings! An AI agent can fix that by running 24/7 in your voice.");
             }
         }
 
-        function renderResponse(text, num, label, sub) {
+        function typeWriter(text) {
             document.getElementById('demo-typing').style.display = 'none';
-            const responseEl = document.getElementById('demo-response-text');
-            responseEl.style.display = 'block';
+            const el = document.getElementById('demo-response-text');
+            el.innerText = '';
             let i = 0;
-            responseEl.textContent = '';
             function type() {
                 if (i < text.length) {
-                    responseEl.textContent += text[i];
+                    el.innerText += text.charAt(i);
                     i++;
-                    setTimeout(type, 20);
+                    setTimeout(type, 25);
                 } else {
-                    showStats(num, label, sub);
+                    document.getElementById('demo-ctas').style.display = 'block';
                 }
             }
             type();
         }
 
-        function showStats(num, label, sub) {
-            const statEl = document.getElementById('demo-stat');
-            document.getElementById('demo-stat-num').textContent = num;
-            document.getElementById('demo-stat-label').textContent = label;
-            document.getElementById('demo-stat-sub').textContent = sub;
-            statEl.style.display = 'flex';
-            document.getElementById('demo-ctas').style.display = 'flex';
-        }
-
         function resetDemo() {
             document.getElementById('demo-step-3').style.display = 'none';
-            document.getElementById('demo-stat').style.display = 'none';
             document.getElementById('demo-step-1').style.display = 'block';
         }
     </script>
