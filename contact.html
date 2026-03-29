@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Pure Publishing</title>
+  <meta name="description" content="Get in touch with Pure Publishing. Free, no-pressure chat about AI consultancy or website design for your East Sussex business." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Pure Publishing — Home">
+          <svg class="nav-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="9" fill="#1a3566"/>
+            <text x="5" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="19" fill="white" letter-spacing="-1">PP</text>
+            <circle cx="30" cy="8" r="3" fill="#f97316"/>
+            <line x1="27.5" y1="8" x2="22" y2="14" stroke="#f97316" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+          <span class="nav-logo-wordmark">Pure Publishing</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ai-consultancy.html">AI Consultancy</a></li>
+          <li><a href="web-design.html">Web Design</a></li>
+          <li><a href="projects.html">Recent Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="ai-consultancy.html">AI Consultancy</a>
+    <a href="web-design.html">Web Design</a>
+    <a href="projects.html">Recent Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" style="min-height: 52vh;" aria-label="Contact hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="container hero-content" style="padding-top: 7rem; padding-bottom: 4rem;">
+      <span class="eyebrow eyebrow-light hero-fade">Get in Touch</span>
+      <h1 class="hero-fade-up">Let's Have a <span>Chat.</span></h1>
+      <p class="lead hero-fade-up" style="animation-delay:0.55s; opacity:0; animation-fill-mode:forwards; max-width:580px;">
+        No hard sell. Just a friendly conversation about what AI — or a new website —
+        could do for your business.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="reveal-left">
+          <span class="eyebrow">Send Us a Message</span>
+          <h2 style="margin-bottom: 0.5rem; font-size: 1.75rem;">We'd love to hear from you.</h2>
+          <p style="margin-bottom: 2rem;">Fill in the form below and we'll get back to you within one working day.</p>
+
+          <form
+            action="https://formspree.io/f/YOURCODE"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Smith"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@yourbusiness.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="phone">Phone <span class="form-optional">(optional)</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="07700 000000"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="form-group">
+                <label for="business">Business Name</label>
+                <input
+                  type="text"
+                  id="business"
+                  name="business"
+                  placeholder="Your Business Ltd"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm interested in&hellip;</label>
+              <select id="interest" name="interest" required>
+                <option value="" disabled selected>Please choose one&hellip;</option>
+                <option value="ai-consultancy">AI Consultancy</option>
+                <option value="web-design">Web Design</option>
+                <option value="both">Both — AI &amp; Web Design</option>
+                <option value="not-sure">Not sure yet — just exploring</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us a bit about your business and what you're hoping to achieve. Don't worry about the details — we can figure those out together."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 1rem;">
+              Send Message &rarr;
+            </button>
+
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; text-align: center;">
+              We typically respond within 1 working day. Your details are kept private and never shared.
+            </p>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div class="reveal-right">
+          <span class="eyebrow">Our Details</span>
+          <h2 style="font-size: 1.75rem; margin-bottom: 2rem;">Find us here.</h2>
+
+          <div class="contact-info">
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div class="contact-item-text">
+                <h4>Location</h4>
+                <p>St Leonards-on-Sea<br>Hastings, East Sussex</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📧</div>
+              <div class="contact-item-text">
+                <h4>Email</h4>
+                <p><a href="mailto:hello@purepublishing.com">hello@purepublishing.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">🕐</div>
+              <div class="contact-item-text">
+                <h4>Response Time</h4>
+                <p>We typically respond within 1 working day.</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">☕</div>
+              <div class="contact-item-text">
+                <h4>Prefer a Call?</h4>
+                <p>Just let us know in your message and we'll arrange a time that suits you.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social -->
+          <div style="margin-top: 2.5rem;">
+            <h4 style="margin-bottom: 1rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);">Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reassurance -->
+          <div style="margin-top: 2.5rem; padding: 1.5rem; background: var(--bg-muted); border-radius: var(--radius); border-left: 3px solid var(--accent);">
+            <h4 style="color: var(--indigo); margin-bottom: 0.5rem;">Not ready to commit?</h4>
+            <p style="font-size: 0.9rem; margin: 0;">
+              That's completely fine. We offer a free, no-obligation initial conversation —
+              no sales pitch, no pressure. Just a genuine chat about whether we can help.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       WHY CHOOSE US — quick reassurance strip
+  ══════════════════════════════════════════ -->
+  <section class="section-sm" style="background: var(--bg-muted);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;" class="reassurance-grid">
+        <div class="reveal reveal-d1">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+          <h4 style="margin-bottom: 0.4rem; color: var(--indigo);">Free Initial Chat</h4>
+          <p style="font-size: 0.9rem;">No charge, no commitment. Just a conversation.</p>
+        </div>
+        <div class="reveal reveal-d2">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+          <h4 style="margin-bottom: 0.4rem; color: var(--indigo);">Fixed, Transparent Quotes</h4>
+          <p style="font-size: 0.9rem;">You'll know exactly what you're paying before anything starts.</p>
+        </div>
+        <div class="reveal reveal-d3">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+          <h4 style="margin-bottom: 0.4rem; color: var(--indigo);">Local &amp; Approachable</h4>
+          <p style="font-size: 0.9rem;">East Sussex based — real people, real conversations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-wordmark">Pure Publishing</div>
+          <p class="footer-tagline">Helping East Sussex businesses work smarter with AI.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Facebook" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="YouTube" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ai-consultancy.html">AI Consultancy</a></li>
+            <li><a href="web-design.html">Web Design</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <ul>
+            <li><a href="mailto:hello@purepublishing.com">hello@purepublishing.com</a></li>
+            <li><a href="contact.html">Book a free chat</a></li>
+          </ul>
+          <p style="font-size:0.8125rem; color: rgba(255,255,255,0.4); margin-top: 1rem; line-height: 1.6;">St Leonards-on-Sea<br>Hastings, East Sussex</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Pure Publishing. St Leonards-on-Sea, East Sussex.</span>
+        <span>Designed &amp; built in East Sussex.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <style>
+    @media (max-width: 768px) {
+      .reassurance-grid { grid-template-columns: 1fr !important; }
+      .contact-grid form > div[style*="grid"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</body>
+</html>
